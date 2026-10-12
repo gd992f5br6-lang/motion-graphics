@@ -6,3 +6,6 @@ motion/
 # WhatsApp agent: real chats must never be committed
 experiments/whatsapp-agent/private/
 experiments/whatsapp-agent/config.json
+experiments/**/WhatsApp Chat*
+experiments/**/_chat.txt
+experiments/**/*.zip

@@ -3,8 +3,10 @@
   "allowed_contacts": ["Sam"],
   "label": "(automatische Antwort)",
   "escalate_keywords": [
-    "geld", "überweis", "bezahl", "rechnung", "iban", "passwort", "code", "pin",
+    "geld", "überweis", "bezahl", "rechnung", "iban", "leihen", "kredit", "schulden",
+    "passwort", "password", "code", "pin", "login", "zugang",
     "arzt", "krank", "notfall", "unfall", "polizei", "anwalt", "vertrag",
-    "trennung", "tod", "beerdigung", "dringend", "termin", "treffen", "zusage"
+    "trennung", "tod", "beerdigung", "dringend", "termin", "treffen", "zusage",
+    "money", "pay", "transfer", "loan", "urgent", "emergency", "doctor", "meeting", "appointment"
   ]
 }
