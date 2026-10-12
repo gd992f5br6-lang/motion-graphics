@@ -2,3 +2,7 @@ node_modules/
 motion/
 .DS_Store
 *.mov
+
+# WhatsApp agent: real chats must never be committed
+experiments/whatsapp-agent/private/
+experiments/whatsapp-agent/config.json

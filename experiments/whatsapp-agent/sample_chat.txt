@@ -1,0 +1,14 @@
+11.10.2026, 18:02 - Nachrichten und Anrufe sind Ende-zu-Ende-verschlüsselt. Niemand außerhalb dieses Chats kann sie lesen.
+11.10.2026, 18:05 - Sam: hey, wie war dein Wochenende?
+11.10.2026, 18:07 - Alex: ganz gut 😊 war viel draußen, du?
+11.10.2026, 18:09 - Sam: Bei mir war's ruhig, hab nur Serien geschaut
+11.10.2026, 18:10 - Alex: klingt gemütlich. Welche denn?
+11.10.2026, 18:12 - Sam: Eine neue Krimiserie, ziemlich spannend
+Letzte Folge endet mit einem Cliffhanger
+11.10.2026, 18:13 - Alex: oh nice, den Namen musst du mir schicken
+11.10.2026, 18:14 - Sam: mach ich
+11.10.2026, 18:15 - Alex: 👍
+12.10.2026, 09:30 - Sam: guten Morgen! Wie läuft's bei dir mit dem neuen Projekt?
+12.10.2026, 09:41 - Alex: morgen! läuft gut, ich lerne gerade viel über Claude Code
+12.10.2026, 09:42 - Alex: macht echt Spaß
+12.10.2026, 12:20 - Sam: Cool! Magst du mir das mal zeigen?

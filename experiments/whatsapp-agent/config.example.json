@@ -1,0 +1,10 @@
+{
+  "my_name": "Alex",
+  "allowed_contacts": ["Sam"],
+  "label": "(automatische Antwort)",
+  "escalate_keywords": [
+    "geld", "überweis", "bezahl", "rechnung", "iban", "passwort", "code", "pin",
+    "arzt", "krank", "notfall", "unfall", "polizei", "anwalt", "vertrag",
+    "trennung", "tod", "beerdigung", "dringend", "termin", "treffen", "zusage"
+  ]
+}
