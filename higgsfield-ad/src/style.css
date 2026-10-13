@@ -1,0 +1,26 @@
+@font-face{font-family:'TikTok Sans';src:url(/node_modules/@fontsource-variable/tiktok-sans/files/tiktok-sans-latin-wght-normal.woff2) format('woff2');font-weight:300 900}
+@font-face{font-family:'Instrument Serif';src:url(/node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:italic;src:url(/node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';src:url(/node_modules/@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2) format('woff2');font-weight:100 800}
+@font-face{font-family:'Inter Tight';src:url(/node_modules/@fontsource-variable/inter-tight/files/inter-tight-latin-wght-normal.woff2) format('woff2');font-weight:100 900}
+
+html,body{margin:0;background:#000;overflow:hidden;height:100%}
+#wrap{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:0 0}
+#stage{position:absolute;inset:0;overflow:hidden;background:#000;font-family:'TikTok Sans','Inter Tight',sans-serif;color:#fff;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1}
+#gl{position:absolute;left:0;top:0;width:1080px;height:1920px}
+#ui{position:absolute;inset:0;pointer-events:none}
+#ui>.sec{position:absolute;inset:0;display:none}
+.a{position:absolute;white-space:nowrap}
+.ch{display:inline-block;white-space:pre}
+.cap{font:800 70px/1.08 'TikTok Sans';letter-spacing:-.02em;text-align:center;width:960px;left:60px;white-space:normal;text-shadow:0 3px 18px rgba(0,0,0,.55),0 1px 2px rgba(0,0,0,.6)}
+.pill{font:700 26px 'TikTok Sans';letter-spacing:.02em;padding:12px 22px;border-radius:40px;display:inline-block}
+.mono{font-family:'JetBrains Mono',monospace}
+.panel{background:rgba(16,16,18,.86);border:1px solid rgba(255,255,255,.1);border-radius:34px;backdrop-filter:blur(24px)}
+#safe{position:absolute;inset:0;display:none;pointer-events:none;
+  background:linear-gradient(rgba(255,0,0,.18),rgba(255,0,0,.18)) 0 0/100% 150px no-repeat,
+             linear-gradient(rgba(255,0,0,.18),rgba(255,0,0,.18)) 0 100%/100% 380px no-repeat,
+             linear-gradient(rgba(255,0,0,.18),rgba(255,0,0,.18)) 100% 0/130px 100% no-repeat}
+body.safe #safe{display:block}
+#bar{position:fixed;left:0;right:0;bottom:0;height:34px;display:flex;gap:14px;align-items:center;padding:0 14px;background:#111;color:#aaa;font:12px 'JetBrains Mono',monospace}
+#bar input[type=range]{flex:1}
+body.render #bar{display:none}
