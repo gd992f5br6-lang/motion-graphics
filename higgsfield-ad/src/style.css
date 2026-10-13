@@ -21,6 +21,8 @@ html,body{margin:0;background:#000;overflow:hidden;height:100%}
              linear-gradient(rgba(255,0,0,.18),rgba(255,0,0,.18)) 0 100%/100% 380px no-repeat,
              linear-gradient(rgba(255,0,0,.18),rgba(255,0,0,.18)) 100% 0/130px 100% no-repeat}
 body.safe #safe{display:block}
+#previz{position:absolute;left:0;right:0;top:44px;text-align:center;font:600 20px 'JetBrains Mono';letter-spacing:.12em;color:rgba(255,255,255,.55);text-transform:uppercase}
+body.final #previz{display:none}
 #bar{position:fixed;left:0;right:0;bottom:0;height:34px;display:flex;gap:14px;align-items:center;padding:0 14px;background:#111;color:#aaa;font:12px 'JetBrains Mono',monospace}
 #bar input[type=range]{flex:1}
 body.render #bar{display:none}

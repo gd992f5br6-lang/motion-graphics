@@ -1,5 +1,5 @@
 // 0:41 Tell #4 — everything in slow motion. Fix: real-time motion, cut on the beat (hard cuts every beat).
-import { worlds, cam, rig, floaty, caption, pill, el, seg, E, show, lerp } from '../kit.js';
+import { worlds, cam, rig, floaty, caption, pill, el, seg, E, show, lerp, LIME } from '../kit.js';
 const S = { name: 'tell4', dur: 8 };
 let C, capA, capB, pA, pB, strip, blocks, head;
 const CUT0 = 2.5, BEAT = 0.5;
@@ -13,8 +13,8 @@ S.init = (ctx) => {
   C = cam();
   const r = ctx.root;
   pA = pill(r, 'TELL #4', 160, 'tell'); capA = caption(r, 'Everything moves in slow-mo.', 230, { size: 74 });
-  pB = pill(r, 'FIX #4', 160, 'fix'); capB = caption(r, 'Real-time motion. Cut on the beat.', 230, { size: 62 });
-  strip = el(r, `<div style="display:flex;justify-content:space-between;font:600 20px 'JetBrains Mono';letter-spacing:.14em;color:rgba(255,255,255,.6)"><span>TIMELINE · 120 BPM</span><span class="tc">00:00</span></div>
+  pB = pill(r, 'FIX #4', 160, 'fix'); capB = caption(r, 'Set the tempo. Real-time motion, cut on the beat.', 230, { size: 60 });
+  strip = el(r, `<div style="display:flex;justify-content:space-between;font:600 20px 'JetBrains Mono';letter-spacing:.14em;color:rgba(255,255,255,.6)"><span>TEMPO · <span style="color:${LIME}">ON THE BEAT</span> · 120 BPM</span><span class="tc">00:00</span></div>
     <div class="track" style="position:relative;display:flex;gap:6px;margin-top:16px;height:70px">${SHOTS.map(() => '<div class="b" style="flex:1;border-radius:10px;background:rgba(255,255,255,.14)"></div>').join('')}
     <div class="head" style="position:absolute;top:-10px;width:4px;height:90px;background:#fff;border-radius:2px;box-shadow:0 0 12px rgba(255,255,255,.6)"></div></div>`,
     { left: '60px', top: '1370px', width: '880px', padding: '24px 40px 30px', whiteSpace: 'normal' });
@@ -36,7 +36,7 @@ S.update = (t, ctx) => {
     rig(C, [tgt[0] + (pos[0] - tgt[0]) * push, pos[1], tgt[2] + (pos[2] - tgt[2]) * push], tgt, { t: t * 1.6 + k, shake: 1.6, fov });
     ctx.place(ctx.shot('full', w.scene, C, 1080, 1920, { exposure: wn === 'shore' ? 0.85 : 1 }), 0, 0, 1080, 1920);
     show(strip, E.out4(seg(t, CUT0, CUT0 + 0.35)), { y: 60, blur: 0 });
-    blocks.forEach((b, i) => { b.style.background = i === k ? '#fff' : i < k ? 'rgba(255,255,255,.4)' : 'rgba(255,255,255,.14)'; });
+    blocks.forEach((b, i) => { b.style.background = i === k ? LIME : i < k ? 'rgba(255,255,255,.4)' : 'rgba(255,255,255,.14)'; });
     const u = (t - CUT0) / (SHOTS.length * BEAT);
     head.style.left = `${(u * 800).toFixed(1)}px`;
     strip.tc.textContent = `00:${String(Math.floor(41 + t)).padStart(2, '0')}`;

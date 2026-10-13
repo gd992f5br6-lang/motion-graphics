@@ -1,10 +1,23 @@
 # Higgsfield TikTok-Spot: „4 tells. 4 fixes.“
 
-**Spec-Ad / Portfolio-Arbeit.** Der Spot ist nicht von Higgsfield beauftragt und nicht mit Higgsfield verbunden. Logo und Wortmarke sind nur nachgesetzt und nicht die offiziellen Assets.
-Wenn du den Spot als echte Anzeige schalten willst, brauchst du die Freigabe von Higgsfield. Ersetze dann die CG-Shots durch echte Higgsfield-Generierungen (siehe Abschnitt 3).
+Auftragsarbeit für **Higgsfield AI**. Der Spot dauert 58 s, das Format ist 1080×1920 (9:16) bei 30 fps, H.264 + AAC, gemastert auf −14 LUFS.
+Die Datei liegt unter `out/Higgsfield_TikTok_58s_Previz.mp4`.
 
-- Format: 1080×1920 (9:16), 30 fps, 55 s, H.264 + AAC, −14 LUFS
-- Datei: `out/Higgsfield_TikTok_55s.mp4`
+> **Status: Previz/Animatic.** Die Shots *innerhalb* des Spots (Wüste, Regen-Stadt, Küste) sind 3D-CG-Platzhalter. Oben im Bild steht deshalb „PREVIZ“. Ein Higgsfield-Spot muss mit Higgsfield-Output werben, also müssen diese Shots vor der Veröffentlichung durch echte Higgsfield-Generierungen ersetzt werden (Abschnitt 3). Danach wird ohne Label gerendert: `Q=&final node tools/render.js …`.
+
+## 0. Wer ist Higgsfield? (Briefing-Analyse)
+
+- **Was:** Higgsfield ist eine generative KI-Plattform für Video und Bild mit Sitz in San Francisco. Gegründet wurde sie 2023 von Alex Mashrabov, der Public Launch war im März 2025. Laut Berichten vom August 2026 bewertet mit 5,4 Mrd. USD.
+- **Positionierung:** „Cinematic“ KI statt generischer KI-Clips. Higgsfield bündelt die stärksten Modelle in einem Workspace und legt eigene Steuerungsebenen darüber: Kamera, Linsen, Licht, Farbe und Figuren-Konsistenz. Die Zielgruppe sind Creator, Filmemacher, Marketing-Teams und Agenturen.
+- **Produkte**, die der Spot zeigt:
+  - **Soul ID:** Eine Figur wird einmal aus 5–20 Fotos trainiert und ist danach in Bild und Video wiederverwendbar.
+  - **Cinema Studio 4.0** (August 2026): ein 5-Lens-System, 30+ Kamerabewegungen (stapelbar), 50+ Farbpaletten, ein Era-Selector (Korn, Farbe und Objektiv-Charakter einer Dekade), Relight, Tempo-Steuerung für das Schnitttempo, Clips bis 30 s und bis zu 50 Referenzbilder.
+  - **30+ Modelle in einem Workspace:** Seedance 2.5, Kling 3.0, Veo 3.1, Higgsfield Soul 2.0, Nano Banana Pro, GPT Image 2.5, Flux 2.0, Wan 2.7 und weitere.
+  - Weitere Produkte, die im Spot nicht vorkommen: Marketing Studio (Ads, UGC, TV-Spot), Draw to Video, Lipsync Studio, Apps/Supercomputer, Virality Predictor, API/CLI.
+- **Markenauftritt:** Das Logo ist ein geschwungener Loop als Bildmarke plus die Wortmarke „Higgsfield“, beides in **Electric Lime #D1FE17** auf Schwarz. Die Assets stammen aus Higgsfields offiziellem Repo `higgsfield-ai/skills` (`assets/logo.png`, `assets/icon.svg`) und liegen unter `assets/brand/`. Der Spot verwendet nur Schwarz, Weiß und Lime. Rot steht ausschließlich für die „Tells“.
+- **Tonalität im Spot:** selbstbewusst, Creator-nah, technisch präzise. Kein Hype-Vokabular und keine erfundenen Zahlen. Jede genannte Funktion ist durch Higgsfields eigene Seiten belegt.
+
+Quellen: [Higgsfield – About](https://higgsfield.ai/about), [Cinema Studio 4.0 (Blog)](https://higgsfield.ai/blog/cinema-studio-4-0), [Cinema Studio – Produktseite](https://higgsfield.ai/cinematic-video-generator), [Changelog](https://higgsfield.ai/creator-hub/changelog), [Soul ID](https://higgsfield.ai/blog/sould-id-best-character-consistency), [Marketing Studio](https://higgsfield.ai/marketing-studio-intro), [Welches Modell?](https://higgsfield.ai/creator-hub/help-center/ai-models/which-ai-model-should-i-use), [Wikipedia](https://en.wikipedia.org/wiki/Higgsfield_AI), [Brandfetch](https://brandfetch.com/higgsfield.ai), [higgsfield-ai/skills (GitHub)](https://github.com/higgsfield-ai/skills).
 
 ---
 
@@ -30,21 +43,21 @@ Produktfunktionen laut Higgsfield: [Soul ID](https://higgsfield.ai/blog/sould-id
 |---|---|---|---|
 | 0:00–0:03 | **Hook** (ab Frame 0, auf allen Kanälen) | „You can spot an AI video in 1 second.“ Vier rote Tags poppen auf | Absichtlich „AI-Look“: übersättigt, warpend, schwebend. Ton klingt wie ein Handylautsprecher |
 | 0:03–0:05 | Versprechen | „4 tells. 4 fixes.“ / „with higgsfield“ | Derselbe Frame, jetzt sauber gegradet. Der Drop: der Filter öffnet sich |
-| 0:05–0:17 | Tell 1, Identitäts-Drift | Soul-ID-Panel trainiert, danach „Character locked“ | Drei Shots mit ≠, danach drei Shots mit = |
-| 0:17–0:29 | Tell 2, schwebende Kamera | Cinema Studio: Brennweite, Linsen, gestapelte Moves | Echter Dolly-Zoom, Linsen-Klicks im Ton |
-| 0:29–0:41 | Tell 3, Plastik-Look | A/B-Wipe „TYPICAL AI | GRADED“, danach Look-Schalter | Korn, Halation und Roll-off werden live zugeschaltet |
-| 0:41–0:49 | Tell 4, Zeitlupe | Timeline mit Playhead | Slow-Mo mit Tape-Stop im Ton, danach 11 harte Schnitte auf den Beat |
-| 0:49–0:55 | CTA + Loop | „Cinematic. Not artificial.“, Wortmarke, „Try it → link in bio“ | Endet auf der Eröffnungs-Komposition, damit der Loop nahtlos ist |
+| 0:05–0:17 | Tell 1, Identitäts-Drift | Soul-ID-Panel (5–20 Fotos) trainiert, danach „Soul ID ready“ | Drei Shots mit ≠, danach drei Shots mit = |
+| 0:17–0:29 | Tell 2, schwebende Kamera | Cinema Studio 4.0: 5-Lens-System, 30+ Moves, „Dolly Zoom“ | Echter Dolly-Zoom 24 → 85 mm, Linsen-Klicks im Ton |
+| 0:29–0:41 | Tell 3, Plastik-Look | A/B-Wipe „TYPICAL AI / GRADED“, danach Cinema-Studio-Look: Palette, Era, Halation, Relight | Die Schalter verändern das Bild live |
+| 0:41–0:49 | Tell 4, Zeitlupe | „Tempo · on the beat“, Timeline mit Playhead | Slow-Mo mit Tape-Stop im Ton, danach 11 harte Schnitte auf den Beat |
+| 0:49–0:58 | CTA + Loop | „Cinematic. Not artificial.“, danach „Every top model. One workspace. 30+ models“, dann offizielles Logo und „Create on higgsfield.ai“ | Endet auf der Eröffnungs-Komposition, damit der Loop nahtlos ist |
 
 Re-Hooks liegen bei 0:05, 0:17, 0:29 und 0:41, jeweils mit „TELL #n“. Am Ende geht es per Rewatch-Loop zurück zum Hook.
 Die Inhalte bleiben außerhalb der TikTok-UI-Zonen (oben 150 px, unten 380 px, rechts 130 px). In der Vorschau lassen sich die Zonen über die Checkbox „safe zones“ einblenden.
 
 **Caption-Vorschlag:**
-> 4 signs your AI video looks like AI, and how to fix each one 🎬 Soul ID, real lenses, film grain, cut on the beat. #higgsfield #aivideo #aifilmmaking #cinematic #videography #specad
+> 4 signs your AI video looks like AI, and how Higgsfield fixes each one 🎬 Soul ID, Cinema Studio 4.0 lenses & looks, tempo on the beat, 30+ models in one place. #higgsfield #aivideo #aifilmmaking #cinemastudio #soulid
 
 ## 3. Prompt-Paket: CG-Shots durch echte Higgsfield-Generierungen ersetzen
 
-In diesem Container hatte ich keinen Zugang zu Higgsfield. Deshalb sind die „Shots“ im Spot echtes 3D-CG. Für eine echte Anzeige solltest du sie durch Higgsfield-Output ersetzen, damit das Gezeigte auch wirklich mit dem Produkt gemacht ist.
+In dieser Cloud-Umgebung sind `higgsfield.ai` und die zugehörigen API- und CDN-Hosts per Netzwerk-Policy gesperrt, ebenso `api.github.com` für die Installation der CLI. Die offiziellen Higgsfield-Skills (`higgsfield-generate`, `higgsfield-soul-id` usw.) sind installiert. Sobald die Hosts freigegeben sind und `higgsfield auth login` mit dem Higgsfield-Account erfolgt ist, lassen sich die Shots unten direkt generieren und in die Fenster des Spots einsetzen.
 
 **Soul ID: Referenzen für die Figur** (6–20 Bilder, immer dasselbe Outfit):
 > Full-body portrait of a tall figure in a long charcoal wool overcoat reaching mid-calf, wide-brim black felt hat, long red wool scarf, black leather boots. Shot from behind, three-quarter back view, standing still. Natural light, 35mm film, visible grain, no retouching.
@@ -70,7 +83,7 @@ Zum Austauschen: Ersetze in `src/sections/*.js` den Aufruf `ctx.shot(...)` durch
 cd higgsfield-ad && npm install
 node tools/serve.js 8080      # Vorschau: http://127.0.0.1:8080/index.html  (?t=17 springt zu Sekunde 17)
 python3 tools/music.py out/soundtrack.wav
-node tools/render.js 0 825 & node tools/render.js 825 1650 & wait
+node tools/render.js 0 870 & node tools/render.js 870 1740 & wait
 tools/assemble.sh
 ```
 

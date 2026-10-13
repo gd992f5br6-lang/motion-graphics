@@ -4,7 +4,7 @@ fix; the slow-mo tell gets a real tape-stop; the montage cuts land on every beat
 usage: python3 tools/music.py out/soundtrack.wav"""
 import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
-os.environ.setdefault('DUR', '55')
+os.environ.setdefault('DUR', '58')
 from synth import *
 
 PROG = ['Am', 'F', 'C', 'G']
@@ -33,8 +33,8 @@ HOOK_END, DROP = 3.0, 3.0
 # ---------------------------------------------------------------- drums + bass (half-time groove)
 for b in range(int(DUR / BEAT)):
     t = b * BEAT; bb = b % 8           # position in a two-bar phrase
-    if 49.0 <= t < 52.0: continue      # CTA breath
-    if t >= 54.5: continue
+    if 49.0 <= t < 51.5: continue      # CTA breath
+    if t >= 57.5: continue
     kpat = bb in (0, 3, 4, 7) if t >= 43.5 or t < 41 else bb in (0, 4)
     if t >= 43.5 and t < 49: kpat = True             # montage: kick on every cut
     kg = 0.45 if 43.5 <= t < 49 else 0.6
@@ -94,9 +94,11 @@ for c in (3.0, 5.0, 17.0, 29.0, 49.0):
     add('fx', whoosh(0.7), c - 0.35, 0.45, -0.4); add('fx', whoosh(0.7), c - 0.33, 0.45, 0.4)
 add('fx', hp(impact(), 45), 43.5, 0.35)
 for k in range(11): add('fx', cut_hit(), 43.5 + k * 0.5, 0.35, (-1) ** k * 0.3)
-add('fx', hp(impact(), 45), 52.0, 0.4); add('fx', shimmer(CH['Am'][1], 3.0), 52.0, 0.5)
+add('fx', hp(impact(), 45), 51.6, 0.3); add('fx', hp(impact(), 45), 54.4, 0.45); add('fx', shimmer(CH['Am'][1], 3.0), 54.4, 0.5)
+for k in range(9): add('fx', tick(), 52.2 + k * 0.15, 0.45, rng.uniform(-.4, .4))
+add('fx', whoosh(0.6), 54.1, 0.45)
 # UI sounds
-UI = [5.25, 5.37, 5.49, 6.2, 6.45, 9.2, 12.3, 12.45, 20.1, 20.25, 20.4, 20.55, 20.7, 34.7, 36.0, 36.8, 37.6, 38.4, 43.5, 52.45, 52.9]
+UI = [5.25, 5.37, 5.49, 6.2, 6.45, 9.2, 12.3, 12.45, 20.1, 20.25, 20.4, 20.55, 20.7, 34.7, 36.0, 36.8, 37.6, 38.4, 43.5, 55.3, 55.7]
 for t in UI: add('fx', tick(), t, 0.55, rng.uniform(-.3, .3))
 for k in range(12): add('fx', bleep(700 + k * 70) * 0.35, 9.75 + k * 0.095, 0.25)      # training blips
 add('fx', shimmer(CH['C'][1], 2.0), 10.95, 0.45)                                        # "character locked"

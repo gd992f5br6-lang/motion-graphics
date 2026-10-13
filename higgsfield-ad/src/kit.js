@@ -3,6 +3,8 @@ import * as THREE from 'three';
 import { desert, city, shore } from './world.js';
 import { el, seg, E, clamp, lerp, show } from './lib.js';
 
+export const LIME = '#D1FE17';             // Higgsfield "Electric Lime" (official icon.svg)
+export const LOGO = '/assets/brand/higgsfield-logo.png';
 let _w = null;
 export const worlds = () => (_w ||= { desert: desert(), city: city(), shore: shore() });
 export const cam = (fov = 38) => new THREE.PerspectiveCamera(fov, 1, 0.05, 600);
@@ -44,7 +46,7 @@ export function caption(root, text, top, o = {}) {
   return d;
 }
 export function pill(root, text, top, kind = 'tell') {
-  const st = kind === 'tell' ? { background: '#ff3b30', color: '#fff' } : kind === 'fix' ? { background: '#fff', color: '#000' } : { background: 'rgba(0,0,0,.55)', color: '#fff', border: '1px solid rgba(255,255,255,.25)' };
+  const st = kind === 'tell' ? { background: '#ff3b30', color: '#fff' } : kind === 'fix' ? { background: LIME, color: '#000' } : { background: 'rgba(0,0,0,.55)', color: '#fff', border: '1px solid rgba(255,255,255,.25)' };
   const d = el(root, text, { top: `${top}px`, left: '0', width: '1080px', textAlign: 'center' });
   d.innerHTML = `<span class="pill" style="background:${st.background};color:${st.color};${st.border ? 'border:' + st.border : ''}">${text}</span>`;
   d.run = (t, t0, t1 = null) => show(d, (t1 == null ? 1 : 1 - E.in2(seg(t, t1, t1 + .12))) * E.outBack(seg(t, t0, t0 + 0.18), 2), { y: 0, blur: 0, scale: 0.3 });

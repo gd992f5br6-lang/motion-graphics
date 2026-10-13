@@ -9,7 +9,7 @@ const { chromium } = require('playwright'); const serve = require('./serve'); co
   const b = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
   const p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
   p.on('pageerror', e => { console.error('PAGEERR', e.message); process.exit(1); });
-  await p.goto(`http://127.0.0.1:${port}/index.html?render`); await p.waitForFunction(() => window.READY, null, { timeout: 300000 });
+  await p.goto(`http://127.0.0.1:${port}/index.html?render${process.env.Q || ""}`); await p.waitForFunction(() => window.READY, null, { timeout: 300000 });
   const dur = await p.evaluate(() => window.DURATION);
   const last = Math.min(to || Infinity, Math.round(dur * FPS));
   const dir = path.join(__dirname, '../out/frames'); fs.mkdirSync(dir, { recursive: true });

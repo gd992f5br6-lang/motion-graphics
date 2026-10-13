@@ -11,6 +11,7 @@ import { SECTIONS } from './timeline.js';
 const W = 1080, H = 1920, FPS = 30;
 const RENDER = location.search.includes('render');
 document.body.classList.add(RENDER ? 'render' : 'preview');
+if (location.search.includes('final')) document.body.classList.add('final');
 const $ = id => document.getElementById(id);
 
 const renderer = new THREE.WebGLRenderer({ canvas: $('gl'), antialias: false, preserveDrawingBuffer: true });

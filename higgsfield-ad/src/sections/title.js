@@ -1,12 +1,13 @@
 // 0:03 "4 tells. 4 fixes." — first clean, operated frame.
-import { worlds, cam, rig, caption, pill, el, seg, E, show, lerp } from '../kit.js';
+import { worlds, cam, rig, caption, pill, el, seg, E, show, lerp, LOGO } from '../kit.js';
 const S = { name: 'title', dur: 2 };
 let C, l1, l2, p;
 S.init = (ctx) => {
   C = cam(38);
   l1 = el(ctx.root, '4 tells.', { left: 0, width: '1080px', textAlign: 'center', top: '330px', font: "800 150px/1 'TikTok Sans'", letterSpacing: '-.04em', textShadow: '0 4px 30px rgba(0,0,0,.4)' });
   l2 = el(ctx.root, '4 fixes.', { left: 0, width: '1080px', textAlign: 'center', top: '490px', font: "italic 400 170px/1 'Instrument Serif'", textShadow: '0 4px 30px rgba(0,0,0,.4)' });
-  p = pill(ctx.root, 'with&nbsp;&nbsp;higgsfield', 700, 'fix');
+  p = el(ctx.root, `<span style="display:inline-flex;align-items:center;gap:16px;padding:16px 28px;border-radius:50px;background:rgba(0,0,0,.6);backdrop-filter:blur(10px)"><span style="font:700 30px 'TikTok Sans';color:rgba(255,255,255,.8)">with</span><img src="${LOGO}" style="height:42px"></span>`, { left: 0, width: '1080px', textAlign: 'center', top: '700px' });
+  p.run = (t, t0) => show(p, E.outBack(seg(t, t0, t0 + 0.2), 2), { y: 0, blur: 0, scale: 0.3 });
 };
 S.update = (t, ctx) => {
   const { desert } = worlds();
