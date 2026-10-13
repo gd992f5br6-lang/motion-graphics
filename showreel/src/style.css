@@ -1,0 +1,25 @@
+@font-face{font-family:'Unbounded';src:url(/node_modules/@fontsource-variable/unbounded/files/unbounded-latin-wght-normal.woff2) format('woff2');font-weight:200 900}
+@font-face{font-family:'Space Grotesk';src:url(/node_modules/@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2) format('woff2');font-weight:300 700}
+@font-face{font-family:'Fraunces';src:url(/node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-normal.woff2) format('woff2');font-weight:100 900}
+@font-face{font-family:'Fraunces';font-style:italic;src:url(/node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-italic.woff2) format('woff2');font-weight:100 900}
+@font-face{font-family:'Instrument Serif';src:url(/node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:italic;src:url(/node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';src:url(/node_modules/@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2) format('woff2');font-weight:100 800}
+@font-face{font-family:'Inter Tight';src:url(/node_modules/@fontsource-variable/inter-tight/files/inter-tight-latin-wght-normal.woff2) format('woff2');font-weight:100 900}
+
+html,body{margin:0;background:#000;overflow:hidden;height:100%}
+#wrap{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+#stage{position:absolute;inset:0;overflow:hidden;background:#000;font-family:'Inter Tight','Inter',sans-serif;color:#fff;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1}
+#gl{position:absolute;left:0;top:0;width:1920px;height:1080px}
+#ui,#fx{position:absolute;inset:0;pointer-events:none}
+#ui>.scene{position:absolute;inset:0;display:none}
+.a{position:absolute;white-space:nowrap}
+.mono{font-family:'JetBrains Mono',monospace}
+.ch{display:inline-block;white-space:pre}
+#leak{position:absolute;top:-20%;height:140%;width:120%;left:0;opacity:0;mix-blend-mode:screen;filter:blur(30px)}
+#flash{position:absolute;inset:0;opacity:0;mix-blend-mode:screen}
+#vignette{position:absolute;inset:0;background:radial-gradient(ellipse 75% 75% at 50% 50%,transparent 55%,rgba(0,0,0,.55) 100%)}
+#grain{position:absolute;inset:0;width:1920px;height:1080px;mix-blend-mode:overlay;opacity:.11}
+#bar{position:fixed;left:0;right:0;bottom:0;height:34px;display:flex;gap:14px;align-items:center;padding:0 14px;background:#111;color:#aaa;font:12px 'JetBrains Mono',monospace}
+#bar input{flex:1}
+body.render #bar{display:none}
