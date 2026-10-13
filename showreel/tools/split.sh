@@ -7,9 +7,9 @@ mkdir -p out/spots
 # name start(s) duration(s)
 while read -r NAME START DUR; do
   S=$((START * FPS)); N=$((DUR * FPS)); FO=$(echo "$DUR - 0.5" | bc)
-  ffmpeg -loglevel error -y -framerate $FPS -start_number $S -i out/frames/%05d.jpg -ss "$START" -t "$DUR" -i out/soundtrack.wav \
+  ffmpeg -nostdin -loglevel error -y -framerate $FPS -start_number $S -i out/frames/%05d.jpg -ss "$START" -t "$DUR" -i out/soundtrack.wav \
     -frames:v $N -vf "fade=t=out:st=$FO:d=0.5" \
-    -c:v libx264 -preset slow -crf 16 -pix_fmt yuv420p -profile:v high -tune film -g 60 \
+    -c:v libx264 -preset slow -crf 18 -pix_fmt yuv420p -profile:v high -tune film -g 60 \
     -af "afade=t=in:d=0.02,afade=t=out:st=$(echo "$DUR - 0.8" | bc):d=0.8,loudnorm=I=-14:TP=-1.0:LRA=9" -c:a aac -b:a 320k -ar 48000 \
     -movflags +faststart -t "$DUR" "out/spots/$NAME.mp4"
   echo "wrote out/spots/$NAME.mp4"
