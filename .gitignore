@@ -4,3 +4,6 @@ motion/
 *.mov
 ads/*/work/
 ads/*/dist/
+ads/reference/reference.mp4
+ads/reference/out/*guide-audio*
+ads/reference/out/compare_*
