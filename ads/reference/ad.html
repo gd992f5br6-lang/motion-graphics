@@ -176,11 +176,24 @@ svg{display:block;overflow:visible}
     <div class="a" id="folder15" style="left:680px;top:620px;width:560px;height:440px">
       <div class="a" style="left:0;top:0;width:560px;height:420px;border-radius:26px;background:#0c4d7c"></div>
       <div class="a" style="left:0;top:-34px;width:210px;height:70px;border-radius:24px 24px 0 0;background:#0c4d7c"></div>
-      <div class="a" style="left:0;top:54px;width:560px;height:390px;border-radius:26px;background:linear-gradient(180deg,#3b93d6,#105fa0);overflow:hidden">
+      <div class="a" id="bdg15" style="left:0;top:0;width:560px;height:420px"></div>
+      <div class="a" id="flap15" style="left:0;top:54px;width:560px;height:390px;border-radius:26px;background:linear-gradient(180deg,#3b93d6,#105fa0);overflow:hidden;transform-origin:50% 100%">
         <div class="a" style="left:60px;top:40px;width:420px;height:240px;border-radius:50%;background:rgba(255,255,255,.55);filter:blur(40px)"></div>
         <div class="a" style="left:-40px;top:160px;width:300px;height:220px;border-radius:50%;background:rgba(5,40,80,.7);filter:blur(36px)"></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- S16 · end card -->
+<section class="sc" id="S16"><div class="dbg"></div><div class="dots" style="opacity:.8"></div>
+  <div class="a" style="inset:0;background:radial-gradient(ellipse 60% 45% at 50% 108%,rgba(130,215,20,.9),rgba(60,140,0,.35) 40%,transparent 72%)"></div>
+  <div class="cam" id="C16">
+    <div class="a" id="ring16" style="left:-440px;top:-440px;width:880px;height:880px;background-image:radial-gradient(circle,#efff7a 3.6px,transparent 4.2px);background-size:12px 12px;-webkit-mask-image:radial-gradient(circle,transparent 46%,#000 47%,#000 60%,transparent 61%);mask-image:radial-gradient(circle,transparent 46%,#000 47%,#000 60%,transparent 61%)"></div>
+    <div class="a" id="logo16" style="left:0;top:0;width:0;height:0"></div>
+    <div class="line" id="word16" style="font-size:176px;font-weight:800;color:#c8f000;letter-spacing:-0.03em"></div>
+    <div class="line ui" id="sub16" style="font-size:50px;font-weight:500;color:#e6f3d8;letter-spacing:-0.01em"></div>
+    <div class="a" id="url16" style="height:96px;padding:0 48px;border-radius:48px;background:#c6f000;color:#0b0b0b;font:700 46px 'Outfit';display:flex;align-items:center;gap:18px;white-space:nowrap"></div>
   </div>
 </section>
 
@@ -191,7 +204,7 @@ svg{display:block;overflow:visible}
 (()=>{
 const $=id=>document.getElementById(id);
 const {S,clamp,lerp,eo,eio}=M;
-const W=1920,H=1080,T=29.5;
+const W=1920,H=1080,T=34.5;
 const eoo=x=>1-Math.pow(1-clamp(x),4);
 /* piecewise keys [[t,v,ease?],…] */
 const K=(keys,ease=eio)=>t=>{
@@ -246,8 +259,8 @@ const mkBlobs=(svg,cfg)=>{ // cfg: [[t,[[x,y,r],…]],…]; slots morph between 
 };
 
 /* ---------- small drawings ---------- */
-const SQUIG='M -64 -16 C -46 -62 -4 -54 -12 -18 C -19 12 -42 28 -20 48 C 0 66 36 36 24 6 C 14 -20 42 -46 64 -28';
-const mark=(r,fg='#0a0a0a',bg='#c6f000')=>`<svg width="${2*r}" height="${2*r}" viewBox="-100 -100 200 200" style="position:absolute;left:${-r}px;top:${-r}px"><circle r="100" fill="${bg}"/><path d="${SQUIG}" fill="none" stroke="${fg}" stroke-width="27" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const LOGO='M-71.38 -41.88C-72.15 -41.03 -72.98 -39.58 -73.47 -38.67C-73.96 -37.76 -74.14 -37.12 -74.32 -36.44C-74.51 -35.76 -74.62 -35.55 -74.59 -34.61C-74.55 -33.67 -74.44 -31.93 -74.13 -30.81C-73.81 -29.68 -73.32 -28.73 -72.69 -27.86C-72.05 -26.98 -71.17 -26.21 -70.33 -25.56C-69.49 -24.92 -68.92 -24.55 -67.64 -23.99C-66.36 -23.43 -64.26 -22.63 -62.66 -22.22C-61.07 -21.82 -59.56 -21.65 -58.07 -21.57C-56.59 -21.48 -55.11 -21.59 -53.75 -21.70C-52.38 -21.81 -51.29 -21.95 -49.88 -22.22C-48.47 -22.50 -46.53 -22.97 -45.30 -23.34C-44.06 -23.71 -44.17 -23.47 -42.48 -24.45C-40.79 -25.43 -37.32 -27.60 -35.14 -29.23C-32.95 -30.87 -31.57 -32.50 -29.37 -34.28C-27.18 -36.06 -23.54 -38.80 -21.97 -39.91C-20.39 -41.03 -20.36 -40.80 -19.94 -40.96C-19.51 -41.13 -19.55 -40.97 -19.41 -40.90C-19.27 -40.82 -19.14 -40.69 -19.08 -40.50C-19.03 -40.32 -19.00 -40.10 -19.08 -39.78C-19.17 -39.47 -19.13 -39.25 -19.61 -38.60C-20.09 -37.96 -19.24 -38.17 -21.97 -35.92C-24.70 -33.67 -32.69 -27.73 -35.99 -25.11C-39.29 -22.48 -39.37 -22.39 -41.76 -20.19C-44.15 -18.00 -48.27 -14.20 -50.34 -11.93C-52.42 -9.67 -53.20 -8.18 -54.21 -6.63C-55.21 -5.08 -55.93 -3.54 -56.37 -2.63C-56.81 -1.72 -56.61 -2.16 -56.83 -1.19C-57.05 -0.22 -57.54 1.96 -57.68 3.20C-57.82 4.45 -57.80 5.02 -57.68 6.28C-57.56 7.55 -57.45 9.06 -56.96 10.80C-56.47 12.55 -55.47 15.14 -54.73 16.77C-53.99 18.39 -53.58 19.13 -52.50 20.57C-51.42 22.01 -49.69 24.08 -48.24 25.42C-46.80 26.75 -45.54 27.60 -43.85 28.56C-42.17 29.52 -39.96 30.54 -38.15 31.18C-36.35 31.83 -34.81 32.22 -33.04 32.43C-31.27 32.64 -29.25 32.57 -27.54 32.43C-25.82 32.29 -24.37 32.07 -22.75 31.58C-21.14 31.08 -19.59 30.40 -17.84 29.48C-16.09 28.56 -14.15 27.55 -12.27 26.07C-10.39 24.60 -10.86 25.77 -6.57 20.63C-2.28 15.50 9.29 0.35 13.48 -4.73C17.68 -9.80 17.12 -8.49 18.59 -9.84C20.07 -11.18 21.26 -12.08 22.33 -12.79C23.40 -13.50 24.05 -13.82 25.02 -14.10C25.98 -14.37 27.21 -14.54 28.10 -14.42C28.98 -14.30 29.50 -14.05 30.32 -13.38C31.14 -12.70 32.25 -11.50 33.01 -10.36C33.77 -9.23 34.50 -7.51 34.91 -6.56C35.33 -5.61 35.41 -5.09 35.50 -4.66C35.59 -4.23 35.52 -4.19 35.43 -4.01C35.35 -3.82 36.39 -4.06 34.98 -3.55C33.57 -3.03 29.37 -1.91 26.98 -0.93C24.59 0.06 22.58 1.20 20.63 2.35C18.67 3.50 16.68 4.92 15.25 5.95C13.82 6.99 13.88 6.81 12.04 8.58C10.21 10.35 6.11 14.43 4.24 16.57C2.38 18.71 1.81 19.58 0.84 21.42C-0.14 23.25 -1.02 25.57 -1.59 27.58C-2.16 29.59 -2.39 31.49 -2.57 33.48C-2.76 35.46 -2.78 37.91 -2.70 39.51C-2.63 41.10 -2.40 41.85 -2.11 43.04C-1.83 44.23 -1.53 45.42 -1.00 46.65C-0.46 47.87 0.46 49.33 1.10 50.38C1.73 51.43 1.97 51.94 2.80 52.94C3.63 53.93 4.51 55.21 6.08 56.35C7.65 57.48 10.63 59.00 12.24 59.75C13.84 60.51 14.42 60.55 15.71 60.87C17.00 61.18 17.96 61.53 19.97 61.65C21.98 61.77 25.78 61.77 27.77 61.59C29.76 61.40 30.60 60.94 31.90 60.54C33.20 60.14 34.04 60.03 35.57 59.16C37.09 58.30 39.36 56.83 41.07 55.36C42.79 53.90 44.50 51.96 45.85 50.38C47.21 48.81 48.49 47.03 49.20 45.93C49.91 44.82 49.67 44.61 50.11 43.76C50.56 42.92 51.04 42.74 51.88 40.88C52.72 39.02 54.32 35.10 55.16 32.62C56.00 30.15 56.34 28.86 56.93 26.01C57.52 23.16 58.35 17.40 58.70 15.52C59.05 13.64 58.63 15.13 59.03 14.74C59.42 14.34 60.36 13.96 61.06 13.16C61.76 12.37 62.74 10.96 63.22 9.95C63.70 8.95 63.80 8.00 63.94 7.13C64.08 6.27 64.10 5.46 64.07 4.78C64.04 4.09 64.02 3.81 63.74 3.01C63.47 2.20 63.08 0.92 62.43 -0.07C61.79 -1.07 60.49 -2.38 59.88 -2.96C59.27 -3.54 59.05 -3.33 58.76 -3.55C58.48 -3.77 58.66 -2.70 58.17 -4.27C57.68 -5.84 56.74 -10.35 55.81 -12.98C54.89 -15.61 53.48 -18.32 52.60 -20.06C51.73 -21.80 51.25 -22.42 50.57 -23.40C49.89 -24.38 49.45 -24.94 48.54 -25.96C47.63 -26.97 46.28 -28.47 45.13 -29.50C43.99 -30.52 43.04 -31.27 41.66 -32.12C40.28 -32.97 38.51 -33.94 36.88 -34.61C35.24 -35.27 33.15 -35.80 31.83 -36.11C30.51 -36.43 30.35 -36.49 28.95 -36.51C27.55 -36.53 25.16 -36.46 23.44 -36.25C21.73 -36.03 20.36 -35.78 18.66 -35.20C16.96 -34.62 15.29 -33.96 13.22 -32.77C11.16 -31.58 8.60 -29.92 6.27 -28.05C3.95 -26.19 1.54 -23.93 -0.74 -21.57C-3.01 -19.21 -4.84 -17.05 -7.35 -13.90C-9.87 -10.75 -12.92 -6.33 -15.81 -2.70C-18.69 0.94 -22.70 5.81 -24.65 7.92C-26.61 10.03 -26.74 9.50 -27.54 9.95C-28.33 10.40 -28.90 10.50 -29.44 10.61C-29.97 10.72 -30.15 10.77 -30.75 10.61C-31.35 10.44 -32.31 10.22 -33.04 9.62C-33.77 9.02 -34.72 7.77 -35.14 7.00C-35.55 6.24 -35.60 5.62 -35.53 5.04C-35.47 4.46 -35.90 4.83 -34.75 3.53C-33.59 2.23 -31.19 -0.41 -28.59 -2.76C-25.99 -5.11 -21.91 -8.39 -19.15 -10.56C-16.39 -12.73 -14.40 -13.89 -12.01 -15.80C-9.62 -17.71 -6.43 -20.53 -4.80 -22.03C-3.17 -23.52 -3.04 -23.69 -2.24 -24.78C-1.45 -25.87 -0.77 -26.84 -0.02 -28.58C0.74 -30.32 1.76 -33.27 2.28 -35.20C2.79 -37.12 2.93 -38.78 3.06 -40.11C3.20 -41.44 3.15 -41.91 3.06 -43.19C2.98 -44.47 2.91 -46.23 2.54 -47.78C2.17 -49.33 1.29 -51.40 0.84 -52.50C0.38 -53.59 0.74 -53.24 -0.21 -54.33C-1.16 -55.42 -3.13 -57.77 -4.86 -59.05C-6.60 -60.33 -8.44 -61.31 -10.63 -62.00C-12.83 -62.69 -15.84 -63.06 -18.04 -63.18C-20.23 -63.30 -22.19 -63.01 -23.80 -62.72C-25.42 -62.42 -26.00 -62.18 -27.73 -61.41C-29.47 -60.63 -32.52 -59.06 -34.22 -58.07C-35.93 -57.07 -35.52 -57.42 -37.96 -55.45C-40.39 -53.47 -46.52 -48.08 -48.83 -46.21C-51.15 -44.33 -50.89 -44.61 -51.85 -44.17C-52.81 -43.74 -53.84 -43.68 -54.60 -43.58C-55.37 -43.49 -55.83 -43.54 -56.44 -43.58C-57.04 -43.63 -57.34 -43.61 -58.20 -43.85C-59.07 -44.09 -60.47 -44.83 -61.61 -45.03C-62.76 -45.22 -63.88 -45.23 -65.09 -45.03C-66.29 -44.82 -67.77 -44.31 -68.82 -43.78C-69.87 -43.26 -70.60 -42.73 -71.38 -41.88ZM35.43 19.52C35.75 19.62 36.04 19.30 35.83 20.50C35.62 21.70 35.07 24.39 34.19 26.73C33.31 29.06 31.44 32.80 30.52 34.52C29.60 36.25 29.36 36.33 28.69 37.08C28.01 37.83 27.06 38.61 26.46 39.05C25.86 39.48 25.70 39.57 25.08 39.70C24.46 39.83 23.53 39.92 22.72 39.83C21.91 39.75 20.82 39.51 20.23 39.18C19.64 38.85 19.37 38.43 19.18 37.87C19.00 37.30 19.02 36.62 19.12 35.77C19.22 34.92 19.38 33.71 19.77 32.76C20.17 31.81 20.58 31.17 21.48 30.07C22.37 28.97 23.86 27.35 25.15 26.14C26.44 24.93 27.75 23.83 29.21 22.80C30.67 21.76 32.89 20.46 33.93 19.91C34.97 19.37 35.12 19.42 35.43 19.52Z'; // Higgsfield mark, traced from the reference (circle radius = 100)
+const mark=(r,fg='#0a0a0a',bg='#c6f000')=>`<svg width="${2*r}" height="${2*r}" viewBox="-100 -100 200 200" style="position:absolute;left:${-r}px;top:${-r}px"><circle r="100" fill="${bg}"/><path d="${LOGO}" fill="${fg}" fill-rule="evenodd"/></svg>`;
 const HAND=`<svg width="56" height="62" viewBox="0 0 40 44"><path d="M12 23V9.5a3 3 0 0 1 6 0V20V6.5a3 3 0 0 1 6 0V20V8.5a3 3 0 0 1 6 0V22v-8a3 3 0 0 1 6 0v14c0 9-6 14-13 14c-6 0-9.5-3-12.5-8l-6.2-9.6a3 3 0 0 1 5-3.2Z" fill="#fff" stroke="#000" stroke-width="2.3" stroke-linejoin="round"/></svg>`;
 const ARROW=`<svg width="52" height="52" viewBox="0 0 34 34"><path d="M3 3 L31 15 L17 18.5 L12.5 32 Z" fill="#7be83c" stroke="#3d9c1a" stroke-width="1.6" stroke-linejoin="round"/></svg>`;
 const SEND=`<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b0b0b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>`;
@@ -268,7 +281,7 @@ const thumbCan=(w,h)=>`${leaves(9,w,h,2)}<div style="position:absolute;left:${w/
 const SC=[ // [id, tin, tout, fade-in]
   ['S1',0,1.52,0],['S2',1.48,2.55,0.08],['S3',2.5,4.52,0.08],['S4',4.42,5.5,0.06],['S5',5.46,6.98,0.02],['S6',6.85,10.7,0.12],
   ['S7',10.6,12.05,0.1],['S8',11.95,12.92,0.08],['S9',12.8,14.32,0.08],['S10',14.25,18.52,0.06],['S11',18.42,19.5,0.1],
-  ['S12',19.4,21.55,0.1],['S13',21.45,23.72,0.1],['S14',23.65,26.15,0.1],['S15',26.1,29.6,0.12]];
+  ['S12',19.4,21.55,0.1],['S13',21.45,23.72,0.1],['S14',23.65,26.15,0.1],['S15',26.1,31.05,0.12],['S16',30.9,34.6,0.12]];
 const SCN=Object.fromEntries(SC.map(s=>[s[0],s]));
 SC.forEach(([id],i)=>$(id).style.zIndex=i+1);
 
@@ -290,7 +303,7 @@ const B3=mkBlobs($('B3'),[[2.5,[[200,1120,260],[1380,1150,240],[2100,-100,200]]]
 /* S4 */
 const L4=mkLine($('T4'),[['One',4.45,'#141d06',0],['of',4.58,'#141d06',3],['the',4.72,'#141d06',2],['things',4.86,'#141d06',5]]);
 $('circ4').innerHTML=`<div id="c4c" class="a" style="left:0;top:0"></div><div id="sq4" class="a" style="left:0;top:0"></div>`;
-$('sq4').innerHTML=`<svg width="200" height="200" viewBox="-100 -100 200 200" style="position:absolute;left:-100px;top:-100px"><path d="${SQUIG}" fill="none" stroke="#0a0a0a" stroke-width="27" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+$('sq4').innerHTML=`<svg width="200" height="200" viewBox="-100 -100 200 200" style="position:absolute;left:-100px;top:-100px"><path d="${LOGO}" fill="#0a0a0a" fill-rule="evenodd"/></svg>`;
 /* S5 */
 $('logo5').innerHTML=mark(100);
 $('px5').innerHTML=Array.from({length:9},(_,i)=>`<div class="a" id="px5_${i}" style="width:34px;height:34px;background:${i%3?'#eaf0e0':'#c8f000'}"></div>`).join('');
@@ -300,7 +313,7 @@ $('ic6').innerHTML=`<div style="position:relative;left:23px;top:23px">${mark(17,
 $('thumb6').innerHTML=thumbCan(74,96);
 $('send6').innerHTML=`<div id="arr6">${SEND}</div>`;
 $('rip6').innerHTML=[0,1,2].map(i=>`<div class="a" id="rp6_${i}" style="left:-30px;top:-30px;width:60px;height:60px;border-radius:50%;background:rgba(185,245,70,.45);opacity:0"></div>`).join('');
-const HEAD6='CLIFFSY, WHAT ARE WE CREATING TODAY?', TXT6='Make a dynamic short ad for my product';
+const HEAD6='HEY, WHAT ARE WE CREATING TODAY?', TXT6='Make a dynamic short ad for my product';
 ['hand6','tagH6','arrowC6','tagA6'].forEach(id=>{const d=document.createElement('div');d.className=id.startsWith('tag')?'tag':'a';d.id=id;if(id.startsWith('tag'))d.textContent='editor';$('G6').appendChild(d);});
 $('hand6').innerHTML=HAND; $('arrowC6').innerHTML=ARROW;
 /* S7: an editor window, built once */
@@ -362,7 +375,16 @@ $('icons14').innerHTML=`
  <div class="a" id="tt14" style="left:132px;top:-62px;width:124px;height:124px;border-radius:50%;background:#e9e9e9;display:flex;align-items:center;justify-content:center"><svg width="60" height="60" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5" fill="none" stroke="#25f4ee" stroke-width="2.6" transform="translate(-1 -1)"/><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5" fill="none" stroke="#fe2c55" stroke-width="2.6" transform="translate(1 1)"/><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 2.6 2.4 4.4 5 4.6" fill="none" stroke="#111" stroke-width="2.6"/></svg></div>
  <div class="a" id="yt14" style="left:66px;top:-62px;width:124px;height:124px;border-radius:50%;background:#ff1a1a;box-shadow:0 0 50px 14px rgba(255,40,40,.55);display:flex;align-items:center;justify-content:center"><svg width="70" height="50" viewBox="0 0 28 20"><rect width="28" height="20" rx="6" fill="#fff"/><path d="M11 5.5 L19 10 L11 14.5 Z" fill="#ff1a1a"/></svg></div>`;
 /* S15 */
-const L15=mkLine($('T15'),[['Editors',26.12,'#111111',0],['Grab',27.2,'#2fb024',0],['the',27.68,'#2fb024',0]]);
+const L15=mkLine($('T15'),[['Editors',26.12,'#111111',0],['Grab',27.2,'#2fb024',0],['the',27.68,'#2fb024',0],['Plugin',29.45,'#2fb024',0]]);
+const BADGE=(inner,bg)=>`<div style="position:absolute;left:-75px;top:-75px;width:150px;height:150px;border-radius:34px;background:${bg};display:flex;align-items:center;justify-content:center;box-shadow:0 20px 40px rgba(0,30,60,.25)">${inner}</div>`;
+$('bdg15').innerHTML=[BADGE(`<div style="position:relative;width:0;height:0">${mark(52)}</div>`,'#0b0b0b'),BADGE(`<span style="font:700 70px Figtree;color:#9999ff;letter-spacing:-0.02em">Pr</span>`,'#00005b'),BADGE(`<span style="font:700 70px Figtree;color:#9999ff;letter-spacing:-0.02em">Ae</span>`,'#00005b')]
+  .map((h,i)=>`<div class="a" id="bd15_${i}" style="left:${[280,120,440][i]}px;top:240px">${h}</div>`).join('');
+/* S16 */
+$('logo16').innerHTML=mark(120);
+$('word16').innerHTML='Higgsfield'.split('').map(c=>`<span>${c}</span>`).join('');
+const SUB16=['Now','in','Premiere','Pro','&','After','Effects'];
+$('sub16').innerHTML=SUB16.map(w=>`<span class="w">${w}</span>`).join('');
+$('url16').innerHTML=`higgsfield.ai<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0b0b0b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>`;
 
 /* ---------- layout that needs fonts ---------- */
 let ready=false, LAY={};
@@ -384,6 +406,8 @@ const init=()=>{ if(ready) return; ready=true;
   const t11=$('T11'); center(t11,960,540);
   const t14=$('T14'); t14.style.left='0px'; t14.style.top=(540-t14.offsetHeight/2)+'px'; LAY.t14=[...t14.children].map(s=>[s.offsetLeft,s.offsetWidth]); LAY.t14w=t14.scrollWidth;
   const t15=$('T15'); t15.style.left='0px'; t15.style.top='0px'; LAY.t15=[...t15.children].map(s=>[s.offsetLeft,s.offsetWidth]); LAY.t15h=t15.offsetHeight;
+  const w16=$('word16'); LAY.w16=w16.offsetWidth; LAY.w16h=w16.offsetHeight;
+  const s16=$('sub16'); center(s16,960,640); const u16=$('url16'); u16.style.left=(960-u16.offsetWidth/2)+'px'; u16.style.top='730px';
   window.LAY=LAY;
   document.querySelectorAll('.sc').forEach(e=>e.style.display='none');
 };
@@ -582,10 +606,27 @@ const seek=(t)=>{
   /* S15 */ if(t>=26.1){
     L15.upd(t);
     const L=LAY.t15, ctr=i=>(L[0][0]+L[i][0]+L[i][1])/2;
-    const cx=K([[26.1,ctr(0)],[27.25,ctr(0)],[27.55,ctr(1)],[27.75,ctr(1)],[28.05,ctr(2)]])(t);
+    const cx=K([[26.1,ctr(0)],[27.25,ctr(0)],[27.55,ctr(1)],[27.75,ctr(1)],[28.05,ctr(2)],[29.45,ctr(2)],[29.75,ctr(3)]])(t);
     const y=K([[27.75,540],[28.3,330]])(t), sway=0;
     $('T15').style.left=(960-cx+sway)+'px'; $('T15').style.top=(y-LAY.t15h/2)+'px';
-    const fu=eoo((t-27.8)/0.6); const f=$('folder15'); f.style.transformOrigin='50% 0'; f.style.transform=`translateY(${((1-fu)*620-50).toFixed(1)}px) scale(1.85)`;
+    const fu=eoo((t-27.8)/0.6), op=eio((t-29.85)/0.35); const f=$('folder15'); f.style.transformOrigin='50% 0';
+    f.style.transform=`translateY(${((1-fu)*620-50+op*60).toFixed(1)}px) scale(${(1.85-0.25*op).toFixed(4)})`;
+    $('flap15').style.transform=`perspective(1200px) rotateX(${(op*-38).toFixed(2)}deg)`;
+    [0,1,2].forEach(i=>{const a=S(t-(29.95+[0,0.08,0.16][i]),13,0.72); const el=$('bd15_'+i);
+      el.style.transform=`translate(0,${(-a*[300,230,230][i]).toFixed(1)}px) rotate(${(a*[0,-10,10][i]).toFixed(2)}deg) scale(${(0.6+0.4*a).toFixed(4)})`; el.style.opacity=clamp((t-29.95)/0.05).toFixed(3);});
+    const ex=eio((t-30.75)/0.3); const c15=$('C15'); c15.style.transformOrigin='960px 700px'; c15.style.transform=`scale(${1+0.35*ex})`; c15.style.filter=ex>0.01?`blur(${(ex*24).toFixed(1)}px)`:'none';
+  }
+  /* S16 */ if(t>=30.9){
+    const lp=S(t-31.0,12,0.75), shift=eio((t-31.2)/0.45);
+    const lx=lerp(960,960-(LAY.w16+260)/2+130,shift), ly=lerp(500,470,shift);
+    $('logo16').style.transform=`translate(${lx.toFixed(1)}px,${ly.toFixed(1)}px) scale(${(lp*lerp(1.5,1,shift)).toFixed(4)})`;
+    const ru=eo((t-31.0)/0.5); $('ring16').style.transform=`translate(${lx}px,${ly}px) scale(${lerp(0.4,1.4,ru).toFixed(4)})`; $('ring16').style.opacity=(clamp((t-31.0)/0.05)*(1-eo((t-31.25)/0.3))).toFixed(3);
+    const w16=$('word16'); w16.style.left=(lx+150)+'px'; w16.style.top=(ly-LAY.w16h/2)+'px';
+    [...w16.children].forEach((sp,i)=>{const a=eoo((t-31.35-i*0.03)/0.22); sp.style.display='inline-block'; sp.style.opacity=a.toFixed(3); sp.style.filter=a<0.98?`blur(${((1-a)*12).toFixed(1)}px)`:'none'; sp.style.transform=`translateX(${((1-a)*-30).toFixed(1)}px)`;});
+    [...$('sub16').children].forEach((sp,i)=>{const a=eoo((t-31.95-i*0.07)/0.25); sp.style.opacity=a.toFixed(3); sp.style.filter=a<0.98?`blur(${((1-a)*10).toFixed(1)}px)`:'none'; sp.style.transform=`translateY(${((1-a)*16).toFixed(1)}px)`;});
+    const ua=S(t-32.55,14,0.8), pr=M.presses([33.4],[])(t); $('url16').style.opacity=clamp((t-32.55)/0.08).toFixed(3); $('url16').style.transform=`translateY(${((1-ua)*40).toFixed(1)}px) scale(${(0.9+0.1*ua-0.05*pr).toFixed(4)})`;
+    const s16=1+0.02*(t-30.9); const c16=$('C16'); c16.style.transform=`translate(${960*(1-s16)}px,${540*(1-s16)}px) scale(${s16.toFixed(4)})`;
+    c16.style.filter=t<31.1?`blur(${((1-eo((t-30.9)/0.2))*18).toFixed(1)}px)`:'none';
   }
 };
 const B8=mkBlobs($('B8'),[[11.9,[[2250,540,380],[2100,1250,160]]],[12.6,[[2150,520,460],[2000,1200,200]]]]);
