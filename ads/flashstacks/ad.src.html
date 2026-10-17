@@ -1,0 +1,382 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>FlashStacks TikTok Ad</title>
+<style>
+@font-face{font-family:'Archivo';src:url(data:font/ttf;base64,__ARCHIVO__) format('truetype');font-weight:100 900;font-stretch:62% 125%}
+:root{
+  --yellow:#ffd249; --white:#ffffff; --pink:#ffc4ef; --cyan:#a4f6f8; --orange:#f9a21f;
+  --ink:#0a0a0a; --accent:#f53fd6; --lock:#0a0a0a; --widget:#1f1f1f; --widget-2:#353535;
+}
+html,body{margin:0;background:#111;overflow:hidden}
+body.preview{height:100vh}
+#wrap{position:relative;transform-origin:50% 50%}
+body.preview #wrap{position:fixed;left:50%;top:50%}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--yellow);
+  font-family:'Archivo',sans-serif;font-stretch:100%;color:var(--ink);-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1}
+.sc{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden}
+.a{position:absolute}
+/* display + head: heavy expanded caps, masked line reveal */
+.big{font-weight:900;font-stretch:125%;text-transform:uppercase;letter-spacing:-0.02em;line-height:0.9;white-space:nowrap}
+.ln{display:block;overflow:hidden;padding-top:0.14em;margin-top:-0.14em;padding-bottom:0.06em;margin-bottom:-0.06em}
+.ln>span{display:inline-block;will-change:auto}
+.body{font-size:46px;font-weight:500;line-height:1.25;letter-spacing:-0.005em}
+.small{font-size:34px;font-weight:600;letter-spacing:0}
+/* flashcards */
+.card{position:absolute;width:560px;height:340px;border-radius:36px;left:-280px;top:-170px}
+.card .sub{position:absolute;left:40px;top:34px;font-size:34px;font-weight:600}
+.card .term{position:absolute;left:40px;right:40px;bottom:40px;font-size:52px;font-weight:800;line-height:1.05;letter-spacing:-0.01em}
+/* hero card: one shape for the whole ad */
+#heroLayer{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:0 0;pointer-events:none;z-index:20}
+#hero{position:absolute;transform-style:preserve-3d}
+.face{position:absolute;inset:0;border-radius:inherit;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden}
+.face.back{transform:rotateY(180deg)}
+.ctr{position:absolute;left:50%;top:50%;width:0;height:0}
+.L{position:absolute;left:0;top:0;width:0;height:0;transform-origin:0 0}
+/* lock screen */
+.lockui{color:#fff}
+.pillbtn{position:absolute;height:84px;border-radius:42px;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:700}
+#touch{position:absolute;left:0;top:0;width:120px;height:120px;margin:-60px 0 0 -60px;border-radius:50%;background:rgba(255,255,255,.5);z-index:30;opacity:0}
+</style></head>
+<body>
+<div id="wrap"><div id="stage">
+
+  <!-- S1 hook · yellow -->
+  <section class="sc" id="s1" style="background:var(--yellow)">
+    <div class="a big" id="s1h" style="left:72px;top:420px">
+      <div class="ln"><span>Lernen</span></div>
+      <div class="ln"><span>nervt.</span></div>
+    </div>
+    <div class="card" id="s1card" style="background:var(--white)"><div class="sub">Chemie</div><div class="term">Zitronensäurezyklus</div></div>
+    <div class="a body" id="s1b" style="left:72px;top:1250px"><div class="ln"><span>Vor allem so:</span></div></div>
+  </section>
+
+  <!-- S2 the pile · pink -->
+  <section class="sc" id="s2" style="background:var(--pink)">
+    <div class="a big" id="s2h" style="left:72px;top:250px">
+      <div class="ln"><span>Sonntag,</span></div>
+      <div class="ln"><span>23:40.</span></div>
+    </div>
+    <div class="a body" id="s2b" style="left:72px;top:600px"><div class="ln"><span>Morgen Klausur. Alles auf einmal.</span></div></div>
+    <div class="a" id="pile" style="left:0;top:0"></div>
+  </section>
+
+  <!-- S3 the turn · white -->
+  <section class="sc" id="s3" style="background:var(--orange)">
+    <div class="a big" id="s3h" style="left:72px;top:250px">
+      <div class="ln"><span>Lern beim</span></div>
+      <div class="ln"><span>Entsperren.</span></div>
+    </div>
+    <div class="a body" id="s3b" style="left:72px;top:560px;width:880px"><div class="ln"><span>Du schaust eh ständig aufs Handy.</span></div></div>
+    <div class="a" id="stack" style="left:0;top:0"></div>
+  </section>
+
+  <!-- S4 lock screen · the frame is the phone -->
+  <section class="sc lockui" id="s4" style="background:var(--lock)">
+    <div class="a" id="s4cam" style="left:0;top:0;width:1080px;height:1920px;transform-origin:0 0">
+      <!-- status bar -->
+      <div class="a" style="right:64px;top:52px;display:flex;gap:14px;align-items:flex-end">
+        <div style="display:flex;gap:6px;align-items:flex-end">
+          <div style="width:9px;height:14px;background:#fff;border-radius:3px"></div><div style="width:9px;height:20px;background:#fff;border-radius:3px"></div>
+          <div style="width:9px;height:26px;background:#fff;border-radius:3px"></div><div style="width:9px;height:32px;background:#fff;border-radius:3px"></div>
+        </div>
+        <div style="width:62px;height:32px;border-radius:10px;background:#fff;position:relative">
+          <div style="position:absolute;right:-8px;top:10px;width:5px;height:12px;border-radius:0 3px 3px 0;background:#fff"></div>
+        </div>
+      </div>
+      <div class="a" style="left:0;width:1080px;top:236px;text-align:center;font-size:50px;font-weight:600">Dienstag, 14. Oktober</div>
+      <div class="a" style="left:0;width:1080px;top:286px;text-align:center;font-size:300px;font-weight:600;font-stretch:96%;letter-spacing:-0.02em;line-height:1">9:41</div>
+      <!-- flashlight / camera -->
+      <div class="a" style="left:110px;top:1700px;width:140px;height:140px;border-radius:50%;background:var(--widget)"></div>
+      <div class="a" style="right:110px;top:1700px;width:140px;height:140px;border-radius:50%;background:var(--widget)"></div>
+      <div class="a" style="left:390px;top:1880px;width:300px;height:12px;border-radius:6px;background:#fff"></div>
+    </div>
+    <div class="a big" id="s4c" style="left:72px;top:1120px;color:#fff"></div>
+  </section>
+
+  <!-- S5 spaced repetition · cyan -->
+  <section class="sc" id="s5" style="background:var(--cyan)">
+    <div class="a big" id="s5h" style="left:72px;top:250px">
+      <div class="ln"><span>Was hakt,</span></div>
+      <div class="ln"><span>kommt öfter.</span></div>
+    </div>
+    <div class="a" id="bar" style="left:120px;top:1112px;width:840px;height:16px;border-radius:8px;background:var(--ink);transform-origin:0 50%"></div>
+    <div class="a" id="ticks" style="left:0;top:0"></div>
+    <div class="a body" id="s5b" style="left:72px;top:1330px;width:880px">
+      <div class="ln"><span>Was sitzt, siehst du seltener.</span></div>
+    </div>
+  </section>
+
+  <!-- S6 CTA · accent field -->
+  <section class="sc" id="s6" style="background:var(--accent)">
+    <div class="a big" id="s6h" style="left:72px;top:640px">
+      <div class="ln"><span>Flash</span></div>
+      <div class="ln"><span>Stacks</span></div>
+    </div>
+    <div class="a body" id="s6b" style="left:72px;top:1060px;width:880px"><div class="ln"><span>Karteikarten auf deinem Sperrbildschirm.</span></div></div>
+    <div class="a" id="cta" style="left:72px;top:1190px;width:620px;height:124px;border-radius:62px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:700;transform-origin:50% 50%">Im App Store laden</div>
+  </section>
+
+  <!-- the one card -->
+  <div id="heroLayer"><div id="hero">
+    <div class="face front" id="ff"><div class="ctr">
+      <div class="L" id="Lcard">
+        <div class="a small" style="left:-240px;top:-136px">Biologie</div>
+        <div class="a" style="left:-240px;top:28px;font-size:52px;font-weight:800;letter-spacing:-0.01em;white-space:nowrap">Mitochondrium?</div>
+      </div>
+      <div class="L" id="Lw1">
+        <div class="a" style="left:-320px;top:-96px;display:flex;align-items:center;gap:16px;font-size:30px;font-weight:600;color:#bdbdbd;white-space:nowrap">
+          <span class="glyph"></span>FlashStacks · Biologie</div>
+        <div class="a" style="left:-320px;top:-30px;font-size:54px;font-weight:700;color:#fff;line-height:1.08;width:640px">Was ist das Mitochondrium?</div>
+      </div>
+      <div class="L" id="Lw2">
+        <div class="a" style="left:-320px;top:-96px;display:flex;align-items:center;gap:16px;font-size:30px;font-weight:600;color:#bdbdbd;white-space:nowrap">
+          <span class="glyph"></span>FlashStacks · Mathe</div>
+        <div class="a" style="left:-320px;top:-30px;font-size:54px;font-weight:700;color:#fff;line-height:1.08;width:640px">Ableitung von sin(x)?</div>
+      </div>
+      <div class="L" id="Lmini">
+        <div class="a" style="left:-100px;top:-58px;font-size:28px;font-weight:600">Mathe</div>
+        <div class="a" style="left:-100px;top:-12px;font-size:50px;font-weight:800;white-space:nowrap;letter-spacing:-0.01em">sin(x)′</div>
+      </div>
+      <div class="L" id="Licon"></div>
+    </div></div>
+    <div class="face back" id="fb"><div class="ctr">
+      <div class="L" id="La1">
+        <div class="a" style="left:-320px;top:-112px;font-size:50px;font-weight:700;color:#fff;line-height:1.08;width:640px">Kraftwerk der Zelle. Erzeugt ATP.</div>
+        <div class="pillbtn" id="a1no" style="left:-320px;top:30px;width:300px;background:var(--widget-2);color:#fff">Nochmal</div>
+        <div class="pillbtn" id="a1ok" style="left:20px;top:30px;width:300px;background:#fff;color:var(--ink)">Gewusst</div>
+      </div>
+      <div class="L" id="La2">
+        <div class="a" style="left:-320px;top:-112px;font-size:50px;font-weight:700;color:#fff;line-height:1.08;width:640px">cos(x)</div>
+        <div class="pillbtn" id="a2no" style="left:-320px;top:30px;width:300px;background:var(--widget-2);color:#fff">Nochmal</div>
+        <div class="pillbtn" id="a2ok" style="left:20px;top:30px;width:300px;background:#fff;color:var(--ink)">Gewusst</div>
+        <div class="a" id="a2msg" style="left:-320px;top:46px;font-size:36px;font-weight:600;color:#fff;white-space:nowrap">Kommt in 10 Min wieder.</div>
+      </div>
+    </div></div>
+  </div></div>
+
+  <div id="touch"></div>
+</div></div>
+
+<script>__MOTION__</script>
+<script>
+(()=>{
+const $=id=>document.getElementById(id);
+const {S,clamp,lerp,eo,eio}=M;
+const W=1080,H=1920,T=20.5;
+const INK='#0a0a0a';
+
+/* ---------- timeline (seconds; 120 bpm, beat = 0.5s) ---------- */
+const TS={s2:2.4, s3:4.9, s4:7.25, s5:12.85, s6:16.85};
+
+/* ---------- the stack glyph (app mark) ---------- */
+const glyph=(sz,cols,rad)=>`<svg width="${sz}" height="${sz}" viewBox="0 0 100 100">
+  <rect x="20" y="16" width="62" height="40" rx="${rad}" fill="${cols[0]}" transform="rotate(-8 51 36)"/>
+  <rect x="18" y="32" width="64" height="40" rx="${rad}" fill="${cols[1]}" transform="rotate(5 50 52)"/>
+  <rect x="15" y="48" width="70" height="40" rx="${rad}" fill="${cols[2]}"/></svg>`;
+document.querySelectorAll('.glyph').forEach(e=>e.innerHTML=glyph(40,['#8a8a8a','#c4c4c4','#ffffff'],8));
+$('Licon').innerHTML=`<div class="a" style="left:-110px;top:-110px">${glyph(220,['#a4f6f8','#ffc4ef','#ffd249'],9)}</div>`;
+
+/* ---------- pile of cards (S2) ---------- */
+const PILE=[
+  ['Geschichte','Weimarer Republik','#ffffff',-110,1060,-9],
+  ['Deutsch','Konjunktiv II','#a4f6f8',110,1000,7],
+  ['Biologie','Photosynthese','#ffd249',-70,1250,5],
+  ['Physik','Ohmsches Gesetz','#f9a21f',120,1200,-6],
+  ['Französisch','Passé composé','#ffffff',-120,1370,-3],
+  ['Mathe','Integral von 1/x','#a4f6f8',90,1390,10],
+  ['Chemie','pH-Wert','#ffd249',-20,1140,-12],
+];
+const pileT=k=>TS.s2+0.35+k*0.25;
+$('pile').innerHTML=PILE.map((c,i)=>`<div class="card" id="pc${i}" style="background:${c[2]}"><div class="sub">${c[0]}</div><div class="term">${c[1]}</div></div>`).join('');
+
+/* ---------- neat stack (S3), sits behind the hero card ---------- */
+const STK=['#ffd249','#a4f6f8','#ffc4ef','#ffffff'];
+$('stack').innerHTML=STK.map((c,i)=>`<div class="card" id="st${i}" style="background:${c};border:0"></div>`).join('');
+
+/* ---------- spaced-repetition ticks (S5) ---------- */
+const TICK=[[200,'Jetzt'],[330,'10 Min'],[500,'1 Tag'],[700,'3 Tage'],[880,'1 Woche']];
+const BARY=1120;
+const HOP=[14.0,14.5,15.0,15.5]; // hero card hops to ticks 1..4 on the beat
+$('ticks').innerHTML=TICK.map((k,i)=>`<div class="a" id="tk${i}" style="left:${k[0]-17}px;top:${BARY-17}px;width:34px;height:34px;border-radius:17px;background:#5fc9cc"></div>
+  <div class="a small" id="tl${i}" style="left:${k[0]-100}px;width:200px;text-align:center;top:${BARY+46}px">${k[1]}</div>`).join('');
+
+/* ---------- S4 captions (masked lines, swapped on taps) ---------- */
+const CAP=[
+  {lines:['Eine Karte.','Jedes Mal.'], tin:7.75, tout:9.85},
+  {lines:['Gewusst?','Weiter.'], tin:9.95, tout:11.75},
+  {lines:['Nochmal?','Kommt bald.'], tin:11.85, tout:12.75},
+];
+$('s4c').innerHTML=CAP.map((c,i)=>`<div class="a" id="cap${i}" style="left:0;top:0">${c.lines.map(l=>`<div class="ln"><span>${l}</span></div>`).join('')}</div>`).join('');
+
+/* ---------- type fitting: one display size, one head size ---------- */
+const MAXW=880;
+const fit=(el,maxSize)=>{el.style.fontSize='100px';const w=Math.max(...[...el.querySelectorAll('.ln>span')].map(s=>s.getBoundingClientRect().width));
+  const fs=Math.min(maxSize,100*MAXW/w);el.style.fontSize=fs.toFixed(1)+'px';return fs;};
+let ready=false;
+const init=()=>{
+  if(ready) return; ready=true;
+  // display: hook + wordmark
+  const d=Math.min(fit($('s1h'),400),fit($('s6h'),400)); $('s1h').style.fontSize=$('s6h').style.fontSize=d+'px';
+  // head: every chapter headline shares one size
+  const h={}; ['s2h','s3h','s5h','s4c'].forEach(id=>h[id]=fit($(id),170));
+  window.SIZES={display:d,head:h};
+};
+window.READY=document.fonts.load('900 100px Archivo').then(()=>document.fonts.load('500 46px Archivo')).then(init);
+
+/* ---------- helpers ---------- */
+const rise=(span,t,tin,tout,k=0)=>{ // masked line: rises out of its own baseline, leaves upward
+  const a=tin==null?1:S(t-tin-k*0.08,19,0.9);
+  const b=tout==null?0:eo((t-tout-k*0.04)/0.2);
+  span.style.transform=`translateY(${((1-a)*108-b*110).toFixed(2)}%)`;
+};
+const riseBlock=(el,t,tin,tout)=>[...el.querySelectorAll('.ln>span')].forEach((s,k)=>rise(s,t,tin,tout,k));
+const wipe=t0=>t=>S(t-t0,12,1);               // push-up between chapters
+const ORDER=['s1','s2','s3','s4','s5','s6'], TIN=[null,TS.s2,TS.s3,TS.s4,TS.s5,TS.s6];
+const WP=TIN.map(x=>x==null?(()=>1):wipe(x));
+const punch=(t,hits)=>hits.reduce((v,h)=>v+0.035*Math.exp(-Math.max(0,t-h)*9)*(t>=h?1:0),0);
+
+/* hero geometry: one card through every chapter */
+const KW=[[4.75,560],[TS.s3+0.1,600],[TS.s4,760],[TS.s5,250],[TS.s6,300]];
+const KH=[[4.75,340],[TS.s3+0.1,364],[TS.s4,290],[TS.s5,156],[TS.s6,300]];
+const KR=[[TS.s4,58],[TS.s5,30],[TS.s6,68]];
+const hW=M.track(560,KW.slice(1),M.MORPH), hH=M.track(340,KH.slice(1),M.MORPH), hR=M.track(36,KR,M.MORPH);
+const hX=M.track(560,[[TS.s3+0.1,540],[TS.s4,540],[TS.s5,TICK[0][0]],[HOP[0],TICK[1][0],[16,0.92]],[HOP[1],TICK[2][0],[16,0.92]],[HOP[2],TICK[3][0],[16,0.92]],[HOP[3],TICK[4][0]-30,[16,0.92]],[TS.s6,72+150]],M.MORPH);
+const hY=M.track(-420,[[4.65,1160,[13,0.8]],[TS.s3+0.1,1040],[TS.s4,800],[TS.s5,BARY-40-78],[TS.s6,250+150]],M.MORPH);
+const hRot=M.track(-14,[[4.65,-4,[13,0.8]],[TS.s3+0.1,0]],M.MORPH);
+const hBG=M.ctrack('#ffffff',[[TS.s4,'#1f1f1f'],[TS.s5,'#ffffff'],[TS.s6,'#0a0a0a']],[14,1]);
+const FLIP=[[8.75,180],[9.95,360],[10.85,540],[TS.s5,720]];
+const hFlip=M.track(0,FLIP,[15,0.78]);
+const hop=t=>HOP.reduce((v,h)=>{const u=clamp((t-h)/0.42);return v+Math.sin(Math.PI*eio(u))*130;},0);
+
+/* lock-screen camera */
+const cam=M.track(1,[[8.15,1.24,M.CAM],[12.55,1,[9,1]]]);
+const FX=540,FY=800;
+const camPt=(x,y,c)=>[FX+(x-FX)*c,FY+(y-FY)*c];
+
+/* touches on the lock screen: [time, world x, world y] */
+const TAPS=[[8.7,600,800],[9.9,540+170,800+72],[10.8,560,790],[11.8,540-170,800+72]];
+
+const seek=(t)=>{
+  init();
+  // chapters: each new field pushes up from the bottom, the old one drifts up beneath it
+  for(let i=0;i<ORDER.length;i++){
+    const a=WP[i](t), nxt=i+1<ORDER.length?WP[i+1](t):0;
+    const y=H*(1-a)-0.28*H*nxt;
+    const el=$(ORDER[i]);
+    const vis=a>0.0005 && nxt<0.999;
+    el.style.display=vis?'':'none';
+    if(vis) el.style.transform=`translateY(${y.toFixed(2)}px)`;
+  }
+  $('stage').style.background=t<TS.s2?'#ffd249':'#111';
+
+  // S1
+  const p1=1+punch(t,[0,0.5]);
+  $('s1h').style.transform=`scale(${p1.toFixed(4)})`; $('s1h').style.transformOrigin='0 50%';
+  riseBlock($('s1h'),t,-0.12,null); riseBlock($('s1b'),t,1.05,null);
+  { const a=S(t-0.5,16,0.82), el=$('s1card');            // one card slapped onto the poster
+    el.style.display=t<0.5?'none':'';
+    el.style.transform=`translate(${(600+(1-a)*60).toFixed(2)}px,${(1010+(1-a)*90).toFixed(2)}px) rotate(${lerp(16,6,a).toFixed(3)}deg) scale(${lerp(1.35,1,a).toFixed(4)})`;
+    el.style.opacity=clamp((t-0.5)/0.06).toFixed(3); }
+
+  // S2
+  riseBlock($('s2h'),t,TS.s2+0.15,null); riseBlock($('s2b'),t,TS.s2+0.45,null);
+  PILE.forEach((c,i)=>{
+    const t0=pileT(i), a=S(t-t0,13,0.8);
+    const el=$('pc'+i);
+    if(t<t0-0.01){el.style.display='none';return;} el.style.display='';
+    const y=lerp(-500,c[4],a), rot=lerp(c[5]*2.2,c[5],a);
+    el.style.transform=`translate(${540+c[3]}px,${y.toFixed(2)}px) rotate(${rot.toFixed(3)}deg)`;
+  });
+
+  // S3
+  riseBlock($('s3h'),t,TS.s3+0.2,null); riseBlock($('s3b'),t,TS.s3+0.5,null);
+  STK.forEach((c,i)=>{
+    const a=S(t-(TS.s3+0.25+i*0.06),15,0.85);
+    const el=$('st'+i); const dy=-(i+1)*26*a, sc=1-(i+1)*0.045;
+    el.style.transform=`translate(540px,${(1040+dy).toFixed(2)}px) scale(${(sc*600/560).toFixed(4)},${(sc*364/340).toFixed(4)})`;
+    el.style.zIndex=10-i;
+  });
+
+  // S4
+  const c=cam(t);
+  $('s4cam').style.transform=`translate(${FX*(1-c)}px,${FY*(1-c)}px) scale(${c.toFixed(5)})`;
+  CAP.forEach((cp,i)=>{const el=$('cap'+i); const on=t>cp.tin-0.05&&t<cp.tout+0.5; el.style.display=on?'':'none'; if(on) riseBlock(el,t,cp.tin,cp.tout);});
+
+  // S5
+  riseBlock($('s5h'),t,TS.s5+0.2,null); riseBlock($('s5b'),t,15.95,null);
+  $('bar').style.transform=`scaleX(${eo((t-TS.s5-0.35)/0.6).toFixed(4)})`;
+  TICK.forEach((k,i)=>{
+    const appear=S(t-(TS.s5+0.45+i*0.07),18,0.8);
+    const visited=i===0?S(t-(TS.s5+0.3),20,1):S(t-HOP[i-1]-0.3,20,1);
+    const dot=$('tk'+i), lab=$('tl'+i);
+    dot.style.transform=`scale(${(appear*(1+0.25*visited*Math.exp(-Math.max(0,t-(i?HOP[i-1]+0.3:0))*6))).toFixed(4)})`;
+    dot.style.background=visited>0.5?INK:'#5fc9cc';
+    lab.style.opacity=appear.toFixed(3);
+    lab.style.fontWeight=Math.round(500+300*visited);
+  });
+
+  // S6
+  riseBlock($('s6h'),t,TS.s6+0.3,null); riseBlock($('s6b'),t,TS.s6+0.75,null);
+  const ca=S(t-(TS.s6+0.95),16,0.85), press=M.presses([18.9],[])(t);
+  $('cta').style.opacity=clamp(ca*1.4).toFixed(3);
+  $('cta').style.transform=`translateY(${((1-ca)*40).toFixed(2)}px) scale(${(1-0.05*press).toFixed(4)})`;
+  $('cta').style.background=press>0.2?'#2a2a2a':INK;
+
+  // the one card
+  const hero=$('hero'), vis=t>=pileT(PILE.length-1)+0.15;
+  hero.style.display=vis?'':'none';
+  if(vis){
+    const w=hW(t),h=hH(t),r=Math.min(hR(t),h/2);
+    let x=hX(t), y=hY(t)-hop(t);
+    const hc=t<TS.s5+0.2?c:1;
+    hero.style.left=(x-w/2).toFixed(2)+'px'; hero.style.top=(y-h/2).toFixed(2)+'px';
+    hero.style.width=w.toFixed(2)+'px'; hero.style.height=h.toFixed(2)+'px'; hero.style.borderRadius=r.toFixed(2)+'px';
+    // tilt while hopping, flip on taps
+    const tilt=HOP.reduce((v,hh)=>v+Math.sin(Math.PI*2*clamp((t-hh)/0.42))*-6,0);
+    hero.style.transform=`perspective(2400px) rotate(${(hRot(t)+tilt).toFixed(3)}deg) rotateY(${hFlip(t).toFixed(3)}deg)`;
+    const bg=hBG(t); $('ff').style.background=bg; $('fb').style.background=bg;
+    $('heroLayer').style.transform=`translate(${FX*(1-hc)}px,${FY*(1-hc)}px) scale(${hc.toFixed(5)})`;
+    $('heroLayer').style.zIndex=t>TS.s5-0.2&&t<TS.s5+0.15?20:20;
+  }
+  const L=(id,tin,tout,o)=>M.apply($(id),M.vis(t,tin,tout,o));
+  L('Lcard',null,TS.s4-0.05);
+  L('Lw1',TS.s4+0.05,9.45);
+  L('Lw2',9.45,TS.s5-0.05,{din:0,lin:0.01});
+  L('Lmini',TS.s5+0.05,TS.s6-0.05);
+  L('Licon',TS.s6+0.05,null);
+  L('La1',null,10.4,{});
+  L('La2',10.4,TS.s5-0.05,{din:0,lin:0.01});
+  // answer buttons: press feedback, then the status line replaces the row on "Nochmal"
+  const pOk=M.presses([9.9],[])(t), pNo=M.presses([11.8],[])(t);
+  $('a1ok').style.transform=`scale(${(1-0.08*pOk).toFixed(4)})`;
+  $('a2no').style.transform=`scale(${(1-0.08*pNo).toFixed(4)})`;
+  $('a2no').style.background=t>11.75?'#5a5a5a':'#353535';
+  const msg=M.vis(t,11.95,null,{});
+  const row=1-msg.a;
+  $('a2no').style.opacity=row.toFixed(3); $('a2ok').style.opacity=row.toFixed(3);
+  M.apply($('a2msg'),msg);
+
+  // touch indicator
+  const tc=$('touch'); let shown=false;
+  for(const [tt,wx,wy] of TAPS){
+    const u=(t-(tt-0.28))/0.62;
+    if(u>=0&&u<=1){
+      const [sx,sy]=camPt(wx,wy,c);
+      const a=clamp(u/0.25)*(1-clamp((u-0.6)/0.4));
+      const s=0.9-0.18*Math.exp(-Math.pow((t-tt)/0.06,2));
+      tc.style.opacity=(a*0.9).toFixed(3); tc.style.transform=`translate(${sx}px,${sy}px) scale(${s.toFixed(4)})`; shown=true;
+    }
+  }
+  if(!shown) tc.style.opacity=0;
+};
+window.seek=seek; window.DURATION=T;
+
+const RENDER=location.search.includes('render');
+document.body.classList.add(RENDER?'render':'preview');
+if(!RENDER){
+  const fitView=()=>{const k=Math.min(innerWidth/W,innerHeight/H);$('wrap').style.transform=`translate(-50%,-50%) scale(${k})`;};
+  fitView(); addEventListener('resize',fitView);
+  window.READY.then(()=>{const t0=performance.now();const loop=()=>{seek(((performance.now()-t0)/1000)%(T+0.5));requestAnimationFrame(loop);};requestAnimationFrame(loop);});
+}
+})();
+</script>
+</body></html>

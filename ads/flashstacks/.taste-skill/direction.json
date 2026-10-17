@@ -1,0 +1,463 @@
+{
+ "version": 1,
+ "at": "2026-10-14T17:19:44.818Z",
+ "seed": 1316859850,
+ "redraws": 0,
+ "input": {
+  "brief": "FlashStacks: flashcards that live on your iPhone lock screen and home screen widgets, spaced repetition; TikTok ad for students",
+  "sector": "consumer-app",
+  "tone": null,
+  "have": [
+   "product-ui"
+  ],
+  "keep": [],
+  "avoid": [],
+  "sections": [
+   "showcase",
+   "how-it-works",
+   "cta"
+  ],
+  "direction": "loud-flat-poster"
+ },
+ "imagery": "interface",
+ "allow": [],
+ "direction": {
+  "id": "loud-flat-poster",
+  "name": "Loud and flat",
+  "sectors": [
+   "agency",
+   "consumer-app",
+   "music",
+   "event",
+   "education",
+   "nonprofit",
+   "physical-product",
+   "saas",
+   "culture"
+  ],
+  "tones": [
+   "bold",
+   "playful"
+  ],
+  "needs": [],
+  "idea": "A page with the directness of a street poster: flat saturated colour, the heaviest type you can find, short blunt statements, and photographs cut out and stuck on. It is for subjects with a voice. Write the page as things a person would actually say out loud, and let the design say them at full volume. The craft is in the control beneath the noise: a strict grid, two or three colours, and exact alignment keep it from becoming a mess.",
+  "composition": "Hero: a statement of three to six words in ultra-heavy type at 11–15vw, filling the width, lines stacked tight (leading 0.85), flush left with 20–28px margins, on a flat saturated ground. One cut-out or hard-cropped photograph overlaps the type from the right or bottom, tilted 3–6 degrees. A single chunky button in the contrasting flat colour. Sections are solid panels in alternating palette colours: one is a row of short statements each on its own panel of unequal width; one is a single photograph bleeding off two edges with a caption block set over a solid colour bar; one is a large plain list. Panels meet edge to edge. Corners are square or use one large radius (28–40px) consistently.",
+  "typography": "The heaviest weight available, set tight, mostly lowercase or mostly uppercase (choose one). Body text is a plain grotesk at 18–20px.",
+  "typeClasses": [
+   "heavy-black",
+   "condensed-heavy",
+   "extended-heavy",
+   "rounded-friendly"
+  ],
+  "colour": "Three or four flat colours at full strength including black or white. Each panel is one colour; text on it is one other.",
+  "paletteTags": [
+   "flat-loud"
+  ],
+  "imagery": "Photographs with attitude, cropped hard or cut to a simple shape with `clip-path` (circle, arch, blunt polygon), slightly rotated, overlapping the type. Two or three on the page.",
+  "sectionTags": [
+   "poster",
+   "colour-field",
+   "type-led"
+  ],
+  "motion": "edge-marquee",
+  "richness": "Colour mass, type mass, and overlap.",
+  "pitfalls": "Headlines still obey the two-line rule: at 13vw that means very few words, which is correct for this voice. No outlines, no offset shadows, no sticker confetti. Rotation is for two or three images only, never for text blocks.",
+  "seenIn": [
+   "aww-warm-fuzzy",
+   "aww-aardvark-book-club",
+   "opl-uglycash",
+   "opl-depo-budget-app",
+   "aww-trevor-noah"
+  ],
+  "allow": []
+ },
+ "hero": {
+  "id": "colour-field-two-ink-statement",
+  "name": "Colour field, two-ink statement",
+  "archetype": "colour-field",
+  "directions": [
+   "type-only-statement",
+   "loud-flat-poster",
+   "colour-chapters"
+  ],
+  "needs": [],
+  "blueprint": "One saturated flat colour covers the whole viewport; there is no navigation bar and no image. Two short pieces of 15px text sit in the top corners on 3% margins: the wordmark at the left, the single action as a text link in the dark ink at the right. The statement starts 15% down, left-aligned from the 3% margin, in a soft heavy serif or a heavy grotesk at clamp(110px, 14vw, 220px), tracking -0.03em, leaded so tightly (0.82) that the two lines nearly touch. Line one is set in a pale ink and line two in a dark ink, the only two inks on the field; the pair fills the top 55% of the screen and the longer line reaches about 90% of the width. A long name may be broken across the two lines with a hyphen if the second half reads as a word of its own. In the bottom-right corner, right-aligned in a column 24% of the viewport wide, one supporting sentence at 17px in the pale ink. The bottom-left quarter stays empty colour.",
+  "mobile": "The same field. The corner texts stay at the top at 14px. The statement sets at 21vw on two lines from a 16px margin, starting at 16% of the height, pale line over dark line. The supporting sentence moves to the bottom-left at 16px across 80% of the width, ending 24px above the bottom edge. The middle fifth of the screen stays empty colour.",
+  "headline": "The name or a two-word statement over two lines, at most 8 characters per line at 21vw on a phone.",
+  "motion": "colour-on-scroll",
+  "seenIn": [
+   "opl-marina-rachello"
+  ]
+ },
+ "type": {
+  "id": "panchang-switzer",
+  "name": "Panchang / Switzer",
+  "class": "extended-heavy",
+  "display": {
+   "family": "Panchang",
+   "source": "fontshare",
+   "slug": "panchang",
+   "weights": [
+    700
+   ],
+   "italic": false,
+   "settings": "weight 700 · tracking -0.02em · leading 1.0 · uppercase; four words or fewer per line because the face is very wide",
+   "css": "<link rel=\"preconnect\" href=\"https://api.fontshare.com\">\n<link rel=\"preconnect\" href=\"https://cdn.fontshare.com\" crossorigin>\n<link href=\"https://api.fontshare.com/v2/css?f[]=panchang@700&display=swap\" rel=\"stylesheet\">\n<link href=\"https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap\" rel=\"stylesheet\">"
+  },
+  "text": {
+   "family": "Switzer",
+   "source": "fontshare",
+   "slug": "switzer",
+   "weights": [
+    400,
+    500
+   ],
+   "italic": false,
+   "settings": "400 for body, 500 for emphasis · leading 1.5 · tracking 0",
+   "css": "<link rel=\"preconnect\" href=\"https://api.fontshare.com\">\n<link rel=\"preconnect\" href=\"https://cdn.fontshare.com\" crossorigin>\n<link href=\"https://api.fontshare.com/v2/css?f[]=panchang@700&display=swap\" rel=\"stylesheet\">\n<link href=\"https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap\" rel=\"stylesheet\">"
+  },
+  "standsInFor": [
+   "Monument Extended",
+   "Owners Wide",
+   "Nimbus Sans Extended"
+  ],
+  "note": "A flat-sided extended grotesk in heavy capitals, wide enough that two words fill the screen, with a neutral sans kept small. Suits portfolios, real estate, travel and brand sites that want a broad, confident wordmark.",
+  "seenIn": [
+   "opl-belen-jones",
+   "aww-lxl-creative",
+   "aww-realevate",
+   "aww-the-tuscan-journey-begins"
+  ],
+  "links": [
+   "https://api.fontshare.com/v2/css?f[]=panchang@700&display=swap",
+   "https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap"
+  ],
+  "scale": {
+   "step-small": "clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem)",
+   "step-body": "clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem)",
+   "step-lead": "clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem)",
+   "step-head": "clamp(2rem, 1.3rem + 3.2vw, 4rem)"
+  }
+ },
+ "palette": {
+  "id": "candy-chapters",
+  "name": "Candy chapters",
+  "tags": [
+   "flat-loud"
+  ],
+  "bg": "#ffd249",
+  "surface": "#f5c63c",
+  "ink": "#0a0a0a",
+  "muted": "#5e4a0a",
+  "accent": "#f53fd6",
+  "accentInk": "#0a0a0a",
+  "fields": [
+   {
+    "bg": "#ffd249",
+    "ink": "#0a0a0a"
+   },
+   {
+    "bg": "#ffffff",
+    "ink": "#0a0a0a"
+   },
+   {
+    "bg": "#ffc4ef",
+    "ink": "#0a0a0a"
+   },
+   {
+    "bg": "#a4f6f8",
+    "ink": "#0a0a0a"
+   },
+   {
+    "bg": "#f9a21f",
+    "ink": "#0a0a0a"
+   }
+  ],
+  "note": "Each section owns one flat candy colour: yellow first, then white, pink, cyan and orange, with all type in black. Magenta is kept for buttons alone.",
+  "seenIn": [
+   "aww-aardvark-book-club"
+  ]
+ },
+ "photos": {
+  "set": "sky-and-space",
+  "title": "Sky and space",
+  "note": "skies, clouds, stars and night skies",
+  "treatment": null,
+  "others": [
+   "architecture"
+  ],
+  "photos": [
+   {
+    "id": 505,
+    "alt": "Tiny silhouetted figure on a dark ridge under a blue and orange twilight sky",
+    "tone": "dark",
+    "colours": [
+     "deep blue",
+     "orange",
+     "black"
+    ],
+    "mono": false,
+    "calm": "top",
+    "quality": 5,
+    "ratio": 1.5,
+    "by": "lee Scott",
+    "page": "https://unsplash.com/photos/_VTgctRg0tA"
+   },
+   {
+    "id": 114,
+    "alt": "Dark storm clouds hanging over a faint mountain ridge",
+    "tone": "dark",
+    "colours": [
+     "dark teal",
+     "muted beige"
+    ],
+    "mono": false,
+    "calm": "all",
+    "quality": 4,
+    "ratio": 1.33,
+    "by": "Brian Gonzalez",
+    "page": "https://unsplash.com/photos/llYg8Ni43fc"
+   },
+   {
+    "id": 765,
+    "alt": "Night sky fading to an orange glow along a dark horizon",
+    "tone": "dark",
+    "colours": [
+     "midnight blue",
+     "burnt orange",
+     "black"
+    ],
+    "mono": false,
+    "calm": "top",
+    "quality": 4,
+    "ratio": 1.33,
+    "by": "Grant McIver",
+    "page": "https://unsplash.com/photos/pmUEwPKL5IE"
+   },
+   {
+    "id": 607,
+    "alt": "Soft streaked clouds in a blue sky above a calm sea",
+    "tone": "mid",
+    "colours": [
+     "sky blue",
+     "white",
+     "teal"
+    ],
+    "mono": false,
+    "calm": "all",
+    "quality": 4,
+    "ratio": 0.67,
+    "by": "Grégoire Hervé-Bazin",
+    "page": "https://unsplash.com/photos/_LLcIlMoUaE"
+   }
+  ]
+ },
+ "motion": {
+  "id": "colour-on-scroll",
+  "name": "Colour by chapter",
+  "description": "Each chapter is its own full-bleed field of one palette colour, so the ground changes exactly at section edges as you scroll, never as a global recolouring of the screen. The only movement: the fixed header (or the one pinned element) takes the ink of the chapter beneath it, switching with a 300ms colour transition as each edge passes under it. Do not drive the page background from an observer: in blind tests a page recoloured mid-section, with a paragraph sitting on two colours, read as broken twice."
+ },
+ "sections": [
+  {
+   "id": "showcase-one-control-blown-up",
+   "role": "showcase",
+   "name": "One control, blown up",
+   "shape": "full-bleed",
+   "tags": [
+    "ui-led",
+    "poster",
+    "colour-field"
+   ],
+   "directions": [
+    "loud-flat-poster",
+    "colour-chapters",
+    "one-motif",
+    "borrowed-category",
+    "dark-room",
+    "product-performs"
+   ],
+   "needs": [],
+   "blueprint": "A flat saturated field, full-bleed and 92svh tall, holds one working control from the product: the toggle, slider, segmented switch or record button the whole product turns on. Build it at true proportions with every dimension in em, mark its root data-ui, then raise that root's font-size until the control stands about 46vh tall. Anchor it right of centre so the section's right and bottom edges crop about a fifth of it (overflow: hidden on the section). It keeps its real label and value, now at poster size, and it works: operating it swaps the field between two palette colours and changes one word of the heading. The heading, two to four words at clamp(28px, 2.6vw, 40px), sits top-left on the page margin with one sentence at 17px beneath it. The lower-left third of the field stays empty.",
+   "mobile": "The field is 86svh. Heading and sentence sit top-left at 26px and 16px. The control is enlarged to about 130vw wide and anchored bottom-left, so the right edge crops its far end while its thumb or active segment stays within reach. It still works and still swaps the field colour.",
+   "seenIn": [
+    "opl-textmode-overlay",
+    "opl-uni"
+   ]
+  },
+  {
+   "id": "how-it-works-one-card-four-fields",
+   "role": "how-it-works",
+   "name": "One card, four fields",
+   "shape": "strip",
+   "tags": [
+    "ui-led",
+    "colour-field",
+    "dense"
+   ],
+   "directions": [
+    "colour-chapters",
+    "dense-tiles",
+    "one-motif",
+    "loud-flat-poster",
+    "product-performs",
+    "borrowed-category"
+   ],
+   "needs": [],
+   "blueprint": "Four flat colour fields stand side by side across the full viewport, each 25vw wide and 84svh tall, butted together with no gaps; neighbours differ clearly in lightness. The same card from the product (a ticket, an order, a request) appears once in each field at the same height, 38% down, centred, 260px wide at true size, each copy marked data-ui. It is further along every time: bare as it arrives, then with an owner and a due date, then with its checklist half ticked, then closed with its final figure. Along the bottom of each field, 28px in, one clause at clamp(22px, 2vw, 32px) on two lines begins with its order word: 'First it lands here.' 'Then someone takes it.' The heading, two to four words at the same size in the heaviest weight, sits top-left in the first field only. On hover a field's card rises 6px over 150ms.",
+   "mobile": "The fields stack, each full width and 64svh tall, colours meeting edge to edge. In each: the clause at 24px top-left with 20px margins, then the card at true size, left-aligned, 32px below. The heading sits in the first field above its clause, at 24px in the heaviest weight.",
+   "seenIn": [
+    "opl-typewave",
+    "opl-depo-budget-app",
+    "opl-leedlime"
+   ]
+  },
+  {
+   "id": "cta-first-step-already-open",
+   "role": "cta",
+   "name": "First step, already open",
+   "shape": "split",
+   "tags": [
+    "ui-led",
+    "colour-field"
+   ],
+   "directions": [
+    "product-performs",
+    "colour-chapters",
+    "loud-flat-poster",
+    "split-stage",
+    "dark-room",
+    "one-motif"
+   ],
+   "needs": [],
+   "blueprint": "The page ends with the product's first screen already open. A full-bleed field in the accent colour, 90svh tall. Right, in columns 7–11, vertically centred: the product's own create dialog at true size, 440px wide, root marked data-ui, with its real title ('Name your workspace'), one text field holding an editable, believable example, one two-option segmented choice and its primary button. Inside the fragment the product's conventions apply, including the shadow its dialog normally casts. The field accepts typing, the choice switches, and the primary button is the page's only action: it carries the typed value into sign-up. Left, in columns 1–5, anchored to the bottom with 40px margins: the closing line, two to four words at clamp(56px, 7vw, 112px), leading 0.92, on two lines, and under it one sentence at 17px saying what happens after the button. The upper-left stays empty.",
+   "mobile": "The closing line leads at 13vw on two lines, top-left, with its sentence beneath at 16px. The dialog follows at full width inside 16px margins, at true size, its primary button 52px tall and full width. The field is at least 84svh; the dialog sits in its lower half.",
+   "seenIn": [
+    "opl-near",
+    "opl-midnight-2"
+   ]
+  }
+ ],
+ "references": [
+  {
+   "id": "opl-depo-budget-app",
+   "name": "Depo Budget App",
+   "url": "https://depobudget.com",
+   "source": "One Page Love",
+   "kind": "consumer-app",
+   "score": 6.9,
+   "idea": "Budgeting reduced to one daily number, dressed in neo-brutalist sticker graphics: flat primaries, thick black outlines and a hard offset shadow on every box.",
+   "mood": [
+    "bold",
+    "cheerful",
+    "blunt",
+    "cartoonish"
+   ],
+   "archetype": "split-text-media",
+   "hero": "Saturated blue field with a faint grid of 100px squares. A 72px header holds a white wordmark left and a black store badge right, above a 3px black rule. Left column, starting 7% in and vertically centred: a cream box with black border holding one line of uppercase mono, a two-line white headline in very heavy grotesque at 5.3vw, two lines of 20px white copy, and a coral button with black border and hard offset shadow. Right of centre: an illustrated phone tilted about 4 degrees, 24% of the width and nearly full height, thick black outline, star stickers on two corners. A lime marquee strip closes the bottom.",
+   "type": "Archivo Black at 76px with -0.025em tracking for headings (white on colour, black on cream), DM Sans at 16 to 20px for copy, and a system monospace in small capitals for labels and amounts. About a 4:1 jump; three faces.",
+   "colour": "#1769e7 #f6eedf #c8e832 #7c3aed #3cbdb1 #ff5c40 — Each section takes a different flat fill: blue, cream, purple, teal, blue again, then a black footer. Lime, coral, amber and red fill cards and buttons; black outlines hold it together.",
+   "imagery": "Flat vector phone frames with thick black outlines showing simplified app screens in the page palette, light and dark themes alternating; four-point star stickers as decoration. No photography.",
+   "layout": "Content sits in a 1230px container with 105px margins. Sections are full-width colour blocks separated by 3px black rules; each opens with a left-aligned heavy heading and one line of copy, followed by a row of outlined cards or phones. The rhythm is uniform.",
+   "sections": [
+    {
+     "role": "how-it-works",
+     "description": "Cream section. A left-aligned heading and one line of copy, then four equal cards in a row with 16px gaps, each a different flat colour (amber, red, teal, lime) with a 2px black border and a 4px hard offset shadow. Inside each: a mono index number top-left, a bold label, one line of copy, a black hairline, then an amount in mono with a tiny uppercase caption."
+    },
+    {
+     "role": "showcase",
+     "description": "Purple section. A white one-line heading spans the container with a single line of copy beneath, then four phone screens in a row at equal width, alternating light and dark app themes, each in a thick black rounded frame. The phones run about a screen tall; a one-line white caption is centred under each at the bottom of the section."
+    },
+    {
+     "role": "features",
+     "description": "Teal section. A small amber mono label in a bordered box sits above a black heavy heading and one line of copy. Below, a three-by-three grid of white cards with black borders and hard shadows; each card is one short row with a line icon at left, a bold title and a single line of small grey copy. Cards are about 100px tall with 20px gaps."
+    }
+   ],
+   "steal": [
+    "Give each section its own flat saturated fill and separate them with a 3px black rule, so colour does the sectioning.",
+    "Apply one physical rule to every box (2px black border plus 4px hard offset shadow, no blur) so buttons, cards and phones read as one kit.",
+    "Show the product's core number as an oversized figure in a lime card rather than as a screenshot."
+   ]
+  },
+  {
+   "id": "aww-aardvark-book-club",
+   "name": "Aardvark Book Club",
+   "url": "https://aardvarkbookclub.com",
+   "source": "Awwwards Site of the Day",
+   "kind": "ecommerce",
+   "score": 7.7,
+   "idea": "A book club dressed as a sweet shop: fat black type, tumbling 3D books and boxes on wavy colour fields, annotated with handwritten asides.",
+   "mood": [
+    "playful",
+    "loud",
+    "bookish",
+    "warm"
+   ],
+   "archetype": "split-text-media",
+   "hero": "A saturated yellow field with two large wavy blobs, pale yellow then orange, rising from the bottom. A three-line headline in Champ Bold, black, at about 8.3vw with leading under 0.85, is flush to a 15px left margin and reaches 60% across. Beneath it: a four-line paragraph 310px wide and a magenta split button (label plus arrow square). Right of centre a 3D hardback in navy and pink tilts 20 degrees, 600px tall; another book is cropped by the top-left corner, a third by the bottom edge. A purple handwritten note sits rotated at far right. Nav: pale-yellow pill links centred, an orange login button, black round social icons.",
+   "type": "Champ Bold, an ultra-heavy wide sans with a looped g, for headings at 120px with tight tracking and leading; Degular for 18px body and pill labels; a purple handwritten script (Hello Organichand) for rotated margin notes and step labels. Three distinct voices.",
+   "colour": "#ffd249 #faed8f #f9a21f #ffdbfd #a4f6f8 #fd48f2 — Each section owns one flat candy colour: yellow hero, white shelf, pink steps, cyan unboxing, deep violet footer. Type stays black; buttons are magenta.",
+   "imagery": "3D-rendered hardbacks and a patterned shipping box, cut out and tilted, floating over flat wavy vector shapes; real book covers on tilted coloured cards; black line drawings of figures on step cards. Nothing sits square to the grid.",
+   "layout": "Sections are full-width panels with roughly 80px corner radius inset about 20px from the viewport, each a different colour. Headings alternate left and centre; cards overlap and rotate a few degrees; handwritten notes are tucked beside headings at an angle.",
+   "sections": [
+    {
+     "role": "showcase",
+     "description": "White band. A centred black heading at 5.5vw over a two-line subline, with a rotated handwritten note at its upper left. Below, a horizontal row of book covers, each on a rounded colour-matched card with a small tag pill at top-left; cards tilt alternately by 3 degrees at staggered heights, the last cropped by the right edge, with two round arrow buttons above at right. Later, covers give way to same-coloured info cards with genre pills, heavy title and blurb."
+    },
+    {
+     "role": "how-it-works",
+     "description": "A pale-pink rounded panel with lighter wavy shapes inside. Heavy black heading at left with a handwritten aside beside it; a small round logo stamp and a magenta split button at right. Along the bottom, four portrait cards about 250px wide in cyan, magenta, yellow and violet overlap like a fanned hand, each rotated a few degrees, with a handwritten step label at top, a black line drawing in the middle and a heavy caption at the foot."
+    },
+    {
+     "role": "other",
+     "description": "A full-viewport cyan rounded panel containing only a 3D shipping box wrapped in a wavy magenta, violet and black pattern, centred. Across the scroll it goes from closed and tilted to lid open, growing to about 57% of the viewport width, with a single handwritten note at its right. No heading and no button."
+    },
+    {
+     "role": "footer",
+     "description": "The preceding white section ends in large rounded bottom corners over a deep violet footer. Left: white logo, two store badges, two magenta round social icons. Centre: the patterned box again, cropped by the bottom edge. Right: a small heavy heading, a white rounded email field and a magenta split button. A black legal strip closes the page."
+    }
+   ],
+   "steal": [
+    "Give each section one flat saturated colour inside a large-radius inset panel and keep the type black across all of them.",
+    "Add rotated handwritten margin notes beside headings to carry secondary facts in a second voice.",
+    "Fan step cards so they overlap and tilt instead of sitting in an even grid."
+   ]
+  },
+  {
+   "id": "opl-archiv",
+   "name": "ARCHIV",
+   "url": "https://www.archiv.systems/",
+   "source": "One Page Love",
+   "kind": "consumer-app",
+   "score": 7.2,
+   "idea": "A waitlist page as a museum plinth: one cut-out everyday object at a time, centred on off-white beneath a heavy serif wordmark.",
+   "mood": [
+    "restrained",
+    "curatorial",
+    "calm",
+    "witty",
+    "precise"
+   ],
+   "archetype": "product-object-centre",
+   "hero": "Off-white single screen with no scroll. A heavy high-contrast serif wordmark in black caps sits top-left at a 56px margin, about 410px wide (28% of the viewport) and 80px tall. Opposite, top-right at the same margin, one line of 14px sans description aligns with the wordmark's top. Dead centre, one photographed object (a painted wooden pepper mill about 140px wide and 440px tall) stands on a barely visible lighter rounded square with a soft contact shadow; other objects replace it in turn. Below, a centred 11px grey line, then a white rounded email field 236px wide with a circled arrow inside its right end. Roughly 80% is empty.",
+   "type": "The wordmark is drawn lettering in a heavy display serif with tight spacing, cap height about 5.5vw. All live text is Helvetica Neue regular at 14px and about 11px, black or grey. Two text sizes only; the contrast is wordmark against near-invisible interface text.",
+   "colour": "#f1efec #000000 #ffffff #d9261c #e8a317 #7a7a75 — Warm off-white field, black wordmark, a white input; all colour arrives through whichever object is showing (red and yellow mill, tan leather, blue cap).",
+   "imagery": "Studio cut-outs of single everyday objects in three-quarter view with a soft grounded shadow on matching off-white, each scaled to similar visual mass and centred, one at a time, no frame.",
+   "layout": "One fixed viewport with four elements: wordmark top-left, description top-right, object in the exact centre, form bottom-centre. Margins of 56px, no rules, nav or footer. On mobile the wordmark centres and the description disappears.",
+   "sections": [
+    {
+     "role": "gallery",
+     "description": "The central object rotates through unrelated things (pepper mill, sling chair, sticker-covered hydrant, layered iced drink, record player, baseball cap), each photographed in the same light and replaced in place within a zone roughly 250-300px square. Shadow direction and visual weight stay constant, so the object is the page's only variable and no carousel controls are needed."
+    },
+    {
+     "role": "contact",
+     "description": "Beneath the object, a centred line of 11px grey text, a 30px gap, then a white field about 236 by 52px with 12px radius: light grey placeholder at left and a 26px circle-outlined arrow as the submit control inside the right end. No button label, border or shadow; the field is the only pure white on the page, which marks it as the one interactive thing."
+    }
+   ],
+   "steal": [
+    "Build a pre-launch page from four elements only (wordmark top-left, one-line description top-right, a single centred object, an email field) and leave the rest of the screen empty.",
+    "Cycle one consistently lit cut-out object in the same spot to show range without adding a grid or carousel controls.",
+    "Make the email field the only pure-white element on an off-white page, with submit as a circled arrow inside it rather than a labelled button."
+   ]
+  }
+ ]
+}
